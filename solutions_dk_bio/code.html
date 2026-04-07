@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DK BIO | Solutions</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#001e1c",
+                    "on-surface-variant": "#43474f",
+                    "tertiary-fixed": "#9ff1ea",
+                    "on-primary-fixed": "#001b3f",
+                    "outline-variant": "#c4c6d1",
+                    "on-surface": "#1a1c1d",
+                    "surface-container-low": "#f3f3f4",
+                    "on-secondary-fixed-variant": "#005237",
+                    "surface-container-highest": "#e2e2e3",
+                    "surface-dim": "#d9dadb",
+                    "surface": "#f9f9fa",
+                    "surface-tint": "#3e5e95",
+                    "on-primary-fixed-variant": "#24467c",
+                    "on-tertiary-fixed": "#00201e",
+                    "outline": "#747781",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f3132",
+                    "tertiary-fixed-dim": "#84d5cd",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "primary-fixed-dim": "#abc7ff",
+                    "primary-fixed": "#d7e2ff",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#9ff4c9",
+                    "on-secondary-container": "#167250",
+                    "secondary-fixed": "#9ff4c9",
+                    "primary-container": "#002d62",
+                    "on-background": "#1a1c1d",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#00504c",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7796d1",
+                    "inverse-primary": "#abc7ff",
+                    "tertiary-container": "#003532",
+                    "on-secondary-fixed": "#002114",
+                    "primary": "#00193c",
+                    "secondary": "#096c4b",
+                    "surface-container-high": "#e8e8e9",
+                    "secondary-fixed-dim": "#84d7ae",
+                    "error": "#ba1a1a",
+                    "surface-container": "#edeeef",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f9f9fa",
+                    "surface-bright": "#f9f9fa",
+                    "surface-variant": "#e2e2e3",
+                    "on-tertiary-container": "#51a39d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar Shell -->
+<header class="bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
+<div class="text-2xl font-bold text-blue-900 dark:text-blue-100 uppercase tracking-tighter">DK BIO</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-colors" href="#">About Us</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-colors" href="#">Technology</a>
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-600 pb-1" href="#">Solutions</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-blue-900 dark:text-blue-400 font-medium">KR/EN</button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section: Editorial Asymmetry -->
+<section class="relative overflow-hidden bg-surface py-20 lg:py-32">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">Business Solutions</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8">
+                        Precision Chemistry for <span class="text-secondary italic">Global Scale.</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        We bridge the gap between complex biological discoveries and commercial viability through world-class sourcing networks and stabilization technologies.
+                    </p>
+</div>
+<div class="relative lg:h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-container rounded-xl overflow-hidden shadow-2xl -rotate-2 transform scale-95 opacity-10"></div>
+<img class="rounded-xl shadow-2xl z-20 w-full h-[500px] object-cover rotate-1 transform hover:rotate-0 transition-transform duration-700" data-alt="Modern laboratory glassware with glowing emerald green liquid against a dark moody architectural blue background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDleJKWdVjMjrEBIKaKBXqBw1R_-Apv2ZC7Db9mUn2PbO7JPm8O9st1IMOydZ_oUezpjy8nKhIspj2hjBLdi-vzzaAA4NCzturhMvRJvWYANcn6JpaiVKu5HQ-hseQRlnxoN9hGVwXnuFOqKNUXjwNIexb5D1ZiG9KNmAbqUphX5Xo-nUI6D0OF4WPPZq0s7VSbNd2RIycQ_TR2Az8mG1wn6kwsK-hGLOdm4xmJTs-hb-JY9NAWfo9D2h14l_tvftk3STPNM3Jl8v4"/>
+</div>
+</div>
+</section>
+<!-- Solutions Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">Core Strategic Solutions</h2>
+<div class="h-1 w-20 bg-secondary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Solution 1: Customized Sourcing -->
+<div class="md:col-span-2 group relative bg-surface-container-lowest p-10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="flex-1">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="search_insights">search_insights</span>
+<h3 class="text-2xl font-bold text-primary mb-4">Customized Sourcing: Mission Possible</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                                    Our global network spans continents to locate the most rare and high-purity biological materials. We don't just find ingredients; we secure the supply chain for your long-term success.
+                                </p>
+<ul class="space-y-3">
+<li class="flex items-center text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-secondary mr-2 text-lg" data-icon="check_circle">check_circle</span>
+                                        Global Network Verification
+                                    </li>
+<li class="flex items-center text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-secondary mr-2 text-lg" data-icon="check_circle">check_circle</span>
+                                        Direct Ethical Sourcing
+                                    </li>
+</ul>
+</div>
+<div class="flex-1 rounded-lg overflow-hidden h-48 md:h-auto">
+<img class="w-full h-full object-cover" data-alt="Top down view of diverse raw botanical samples and chemical vials on a clean white professional workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4oRJ2DWwxltmqSAu6A-2Q45FeSBii8kG9_OF19VZGCRhdt4U6YjgbKffD2ao1sI_nGqdhJaExhlJSgjXAvd5BBa8dmH6uQNLN7SSsvFdhugahuKPuxMTg2qGguma_cAiuLwp5ceo7w6cdU0RlvCfShOkVVxEvuGyyBHMV_eOfYCyub6_IyG3UqocJ8-rpsFgjyEfFMNUlR8mO6vMF8cO8Od60CtVBT8juYUUEI4cPQftPNJuStSHLJboC6mt4GjEqD9gBRH_-hKo"/>
+</div>
+</div>
+</div>
+<!-- Solution 2: Functional Ingredients -->
+<div class="group relative bg-primary p-10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl text-white">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-6" data-icon="science">science</span>
+<h3 class="text-2xl font-bold mb-4">Functional Ingredients</h3>
+<p class="text-blue-100/70 leading-relaxed mb-8">
+                            Specialized in solubilization and stabilization of difficult materials to unlock maximum biological efficacy.
+                        </p>
+<div class="p-4 bg-primary-container rounded-lg border border-white/10">
+<div class="text-xs font-bold uppercase tracking-widest text-secondary-fixed mb-2">Performance Focus</div>
+<div class="flex justify-between items-center text-sm">
+<span>Stability</span>
+<span class="text-secondary-fixed">+98%</span>
+</div>
+<div class="w-full bg-white/10 h-1.5 rounded-full mt-2">
+<div class="bg-secondary-fixed h-full w-[98%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Value Proposition -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-primary mb-4 tracking-tight">The DK BIO Advantage</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Superior value through technical mastery and strategic positioning.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-outline-variant/20 rounded-xl overflow-hidden">
+<!-- Value 1 -->
+<div class="p-12 border-r border-outline-variant/20 bg-surface-container-lowest transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="fingerprint">fingerprint</span>
+</div>
+<h4 class="text-xl font-bold text-primary">Unique Identity</h4>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Exclusive formulations and sourcing routes that give your final products a distinct market advantage and narrative.</p>
+</div>
+<!-- Value 2 -->
+<div class="p-12 border-r border-outline-variant/20 bg-surface-container-lowest transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="high_quality">high_quality</span>
+</div>
+<h4 class="text-xl font-bold text-primary">Quality &amp; Stability</h4>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Rigorous quality control systems ensure every batch meets the highest stability standards for industrial application.</p>
+</div>
+<!-- Value 3 -->
+<div class="p-12 bg-surface-container-lowest transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="payments">payments</span>
+</div>
+<h4 class="text-xl font-bold text-primary">Reasonable Price</h4>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Direct-from-source logic and optimized logistics allow us to offer premium bio-materials at competitive industry rates.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-secondary/10 -skew-x-12 transform translate-x-20"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="mb-16">
+<h2 class="text-4xl font-bold mb-4 tracking-tight">Sourcing to Supply Workflow</h2>
+<p class="text-blue-100/60 max-w-xl">A transparent, rigorous process designed for precision and reliability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+<div class="text-secondary-fixed text-4xl font-black mb-4 opacity-50">01</div>
+<h5 class="text-lg font-bold mb-3">Discovery</h5>
+<p class="text-sm text-blue-100/70">Identifying specific material needs and technical requirements through global database screening.</p>
+</div>
+<div class="p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+<div class="text-secondary-fixed text-4xl font-black mb-4 opacity-50">02</div>
+<h5 class="text-lg font-bold mb-3">Sourcing</h5>
+<p class="text-sm text-blue-100/70">Direct engagement with our vetted laboratory networks and raw material producers worldwide.</p>
+</div>
+<div class="p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+<div class="text-secondary-fixed text-4xl font-black mb-4 opacity-50">03</div>
+<h5 class="text-lg font-bold mb-3">Refinement</h5>
+<p class="text-sm text-blue-100/70">Applying DK BIO stabilization protocols to enhance the material's shelf-life and performance.</p>
+</div>
+<div class="p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+<div class="text-secondary-fixed text-4xl font-black mb-4 opacity-50">04</div>
+<h5 class="text-lg font-bold mb-3">Supply</h5>
+<p class="text-sm text-blue-100/70">Seamless integration into your production line with full documentation and quality assurance.</p>
+</div>
+</div>
+<!-- Bio-Badge Container -->
+<div class="mt-16 flex flex-wrap gap-4">
+<span class="px-6 py-2 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span> ISO 9001 CERTIFIED
+                    </span>
+<span class="px-6 py-2 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="eco">eco</span> SUSTAINABLE ORIGIN
+                    </span>
+<span class="px-6 py-2 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="biotech">biotech</span> BIO-STABILIZED
+                    </span>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-5xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-2xl p-12 shadow-sm border border-outline-variant/10 text-center relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-secondary rounded-full"></div>
+<h2 class="text-3xl font-bold text-primary mb-6">Ready for your "Mission Possible"?</h2>
+<p class="text-on-surface-variant mb-10 max-w-xl mx-auto">Connect with our solution experts to solve your sourcing and ingredient stabilization challenges today.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-bold transition-transform hover:scale-105">Request Solution Consultation</button>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-md font-bold transition-transform hover:scale-105">Request Ingredient Catalog</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full py-16 px-8 mt-20 font-['Inter'] text-sm">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-black text-blue-950 dark:text-blue-100 uppercase tracking-tighter">DK BIO</div>
+<p class="text-slate-500 max-w-xs leading-relaxed">
+                    Advancing biotechnology through global strategic sourcing and advanced material stabilization.
+                </p>
+</div>
+<div>
+<h6 class="font-bold text-blue-950 dark:text-blue-200 mb-6">Company</h6>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-emerald-600 underline underline-offset-4 transition-opacity" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-emerald-600 underline underline-offset-4 transition-opacity" href="#">Technology</a></li>
+<li><a class="font-semibold text-emerald-700 underline underline-offset-4 transition-opacity" href="#">Solutions</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-blue-950 dark:text-blue-200 mb-6">Partners</h6>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-emerald-600 underline underline-offset-4 transition-opacity" href="#">DAMY Chemical Group</a></li>
+<li><a class="text-slate-500 hover:text-emerald-600 underline underline-offset-4 transition-opacity" href="#">Labio</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-blue-950 dark:text-blue-200 mb-6">Legal</h6>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-emerald-600 underline underline-offset-4 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-emerald-600 underline underline-offset-4 transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-slate-400 text-xs text-center md:text-left">
+            © 2024 DK BIO. All rights reserved. Part of DAMY Chemical Group.
+        </div>
+</footer>
+</body></html>
