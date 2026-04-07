@@ -253,11 +253,11 @@ export default function App() {
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-10 leading-tight">
                 Let's create the future of <br className="hidden md:block" /> bio-chemistry together.
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-[#096c4b] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform text-lg shadow-lg shadow-[#096c4b]/20">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-xl mx-auto">
+                <button className="w-full sm:w-auto bg-[#096c4b] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform text-lg shadow-lg shadow-[#096c4b]/20">
                   Inquiry Now
                 </button>
-                <button className="text-white border border-white/30 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors text-lg">
+                <button className="w-full sm:w-auto text-white border border-white/30 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors text-lg">
                   View Solutions
                 </button>
               </div>
