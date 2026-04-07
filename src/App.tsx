@@ -1,4 +1,4 @@
-import { useState, useEffect, type ReactNode } from 'react';
+import { Fragment, useState, useEffect, type ReactNode } from 'react';
 import { 
   Menu, 
   X, 
@@ -8,6 +8,14 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { motion } from 'motion/react';
+
+const NAV_ITEMS = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About Us' },
+  { href: '#technology', label: 'Technology' },
+  { href: '#solutions', label: 'Solutions' },
+  { href: '#contact', label: 'Contact' },
+];
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +29,13 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (selector: string) => () => {
+    const target = document.querySelector(selector);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -29,11 +44,11 @@ export default function App() {
           <div className="text-2xl font-extrabold tracking-tighter text-[#00193c] font-headline">DK BIO</div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <NavLink href="#" label="Home" />
-            <NavLink href="#" label="About Us" active />
-            <NavLink href="#" label="Technology" />
-            <NavLink href="#" label="Solutions" />
-            <NavLink href="#" label="Contact" />
+            {NAV_ITEMS.map((item) => (
+              <Fragment key={item.href}>
+                <NavLink href={item.href} label={item.label} />
+              </Fragment>
+            ))}
           </div>
 
           <div className="flex items-center space-x-4">
@@ -56,18 +71,22 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-white border-t border-slate-100 p-6 space-y-4 shadow-xl"
           >
-            <MobileNavLink href="#" label="Home" />
-            <MobileNavLink href="#" label="About Us" active />
-            <MobileNavLink href="#" label="Technology" />
-            <MobileNavLink href="#" label="Solutions" />
-            <MobileNavLink href="#" label="Contact" />
+            {NAV_ITEMS.map((item) => (
+              <Fragment key={item.href}>
+                <MobileNavLink
+                  href={item.href}
+                  label={item.label}
+                  onClick={() => setIsMenuOpen(false)}
+                />
+              </Fragment>
+            ))}
           </motion.div>
         )}
       </header>
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[700px] flex items-center overflow-hidden">
+        <section id="home" className="relative h-[700px] flex items-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#00193c] to-[#00193c]/80 z-10" />
           <img 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0ALzoQ1G3zHm4fykScZm2t19Fo9pFM_WsYu04Pi_Okuk10J7dtM93npsGMYtbxCrUdhz3b4gA2xwnf8TQAqrJzK6Q_6ctLV6rmvPukBmQKyfbDQGQJmuXN0Mxab3EOTWqWRpY85L5_cFomlt1fyFoPco-lxSuVmuVTOwLQfmdDPy0X73oQPBu1BQ9Yuzv3kDRw9mFZ_w2lV4bZxG90cofoq15EWOuTf1mAExbvA_D2CYtO5Q-lwm1JhItPn-O0QPMjksWxlabW8c" 
@@ -97,7 +116,7 @@ export default function App() {
         </section>
 
         {/* Vision & Mission */}
-        <section className="py-32 px-6 max-w-7xl mx-auto">
+        <section id="about" className="py-32 px-6 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <motion.div 
               whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +179,7 @@ export default function App() {
         </section>
 
         {/* Legacy & Trust */}
-        <section className="bg-slate-100 py-32 overflow-hidden">
+        <section id="technology" className="bg-slate-100 py-32 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center gap-16">
               <div className="w-full md:w-1/2 border-l-4 border-[#096c4b] pl-8">
@@ -184,7 +203,7 @@ export default function App() {
         </section>
 
         {/* Global Logistics */}
-        <section className="py-32 px-6 max-w-7xl mx-auto">
+        <section id="solutions" className="py-32 px-6 max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="font-headline text-4xl font-bold text-[#00193c] mb-4">A Global Logistics Powerhouse</h2>
             <div className="w-24 h-1 bg-[#096c4b] mx-auto mb-8" />
@@ -239,7 +258,7 @@ export default function App() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-32 px-6">
+        <section id="contact" className="py-32 px-6">
           <div className="max-w-5xl mx-auto bg-[#00193c] rounded-3xl overflow-hidden relative p-16 text-center">
             <div className="absolute inset-0 opacity-10 pointer-events-none">
               <img 
@@ -253,11 +272,19 @@ export default function App() {
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-10 leading-tight">
                 Let's create the future of <br className="hidden md:block" /> bio-chemistry together.
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-[#096c4b] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform text-lg shadow-lg shadow-[#096c4b]/20">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-xl mx-auto">
+                <button
+                  type="button"
+                  onClick={scrollToSection('#contact')}
+                  className="w-full sm:w-auto bg-[#096c4b] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform text-lg shadow-lg shadow-[#096c4b]/20"
+                >
                   Inquiry Now
                 </button>
-                <button className="text-white border border-white/30 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors text-lg">
+                <button
+                  type="button"
+                  onClick={scrollToSection('#solutions')}
+                  className="w-full sm:w-auto text-white border border-white/30 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors text-lg"
+                >
                   View Solutions
                 </button>
               </div>
@@ -303,28 +330,23 @@ export default function App() {
   );
 }
 
-function NavLink({ href, label, active = false }: { href: string; label: string; active?: boolean }) {
+function NavLink({ href, label }: { href: string; label: string }) {
   return (
-    <a 
-      href={href} 
-      className={`text-sm font-semibold transition-all duration-200 ${
-        active 
-          ? 'text-[#096c4b] border-b-2 border-[#096c4b] pb-1' 
-          : 'text-slate-600 hover:text-[#00193c]'
-      }`}
+    <a
+      href={href}
+      className="text-sm font-semibold text-slate-600 hover:text-[#00193c] transition-all duration-200"
     >
       {label}
     </a>
   );
 }
 
-function MobileNavLink({ href, label, active = false }: { href: string; label: string; active?: boolean }) {
+function MobileNavLink({ href, label, onClick }: { href: string; label: string; onClick?: () => void }) {
   return (
-    <a 
-      href={href} 
-      className={`block text-lg font-bold ${
-        active ? 'text-[#096c4b]' : 'text-[#00193c]'
-      }`}
+    <a
+      href={href}
+      onClick={onClick}
+      className="block text-lg font-bold text-[#00193c]"
     >
       {label}
     </a>
