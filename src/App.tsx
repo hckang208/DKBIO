@@ -29,6 +29,13 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (selector: string) => () => {
+    const target = document.querySelector(selector);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -266,12 +273,20 @@ export default function App() {
                 Let's create the future of <br className="hidden md:block" /> bio-chemistry together.
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-xl mx-auto">
-                <a href="#contact" className="w-full sm:w-auto bg-[#096c4b] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform text-lg shadow-lg shadow-[#096c4b]/20 text-center">
+                <button
+                  type="button"
+                  onClick={scrollToSection('#contact')}
+                  className="w-full sm:w-auto bg-[#096c4b] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform text-lg shadow-lg shadow-[#096c4b]/20"
+                >
                   Inquiry Now
-                </a>
-                <a href="#solutions" className="w-full sm:w-auto text-white border border-white/30 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors text-lg text-center">
+                </button>
+                <button
+                  type="button"
+                  onClick={scrollToSection('#solutions')}
+                  className="w-full sm:w-auto text-white border border-white/30 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors text-lg"
+                >
                   View Solutions
-                </a>
+                </button>
               </div>
             </div>
           </div>
