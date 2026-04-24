@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DK BIO | 글로벌 화장품 원료 총판</title>
+<meta name="description" content="다미화학·라비오 37년 인프라 기반의 글로벌 화장품 원료 소싱 전문 파트너. 일본·인도·중국 직접 소싱 네트워크."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#d8e3fb",
+                    "surface": "#f9f9ff",
+                    "on-secondary-fixed": "#101c2c",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#002b5c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "secondary-fixed": "#d7e3fa",
+                    "surface-dim": "#cfdaf2",
+                    "on-primary-fixed-variant": "#264779",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-surface": "#111c2d",
+                    "surface-container-low": "#f0f3ff",
+                    "background": "#f9f9ff",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#002b5c",
+                    "on-surface-variant": "#43474f",
+                    "on-background": "#111c2d",
+                    "on-tertiary-container": "#909395",
+                    "primary-fixed-dim": "#aac7ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "surface-variant": "#d8e3fb",
+                    "tertiary": "#141819",
+                    "secondary-fixed-dim": "#bbc7dd",
+                    "on-error": "#ffffff",
+                    "secondary": "#535f72",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#7594cb",
+                    "inverse-surface": "#263143",
+                    "outline-variant": "#c4c6d0",
+                    "inverse-primary": "#aac7ff",
+                    "surface-tint": "#3f5f92",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-container": "#292c2e",
+                    "surface-container": "#e7eeff",
+                    "on-secondary-container": "#596578",
+                    "primary-fixed": "#d6e3ff",
+                    "outline": "#747780",
+                    "secondary-container": "#d7e3fa",
+                    "surface-container-high": "#dee8ff",
+                    "on-primary-fixed": "#001b3e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.5rem",
+                    "xl": "1rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "stack-lg": "2.5rem",
+                    "section-gap": "6rem",
+                    "stack-sm": "0.75rem",
+                    "margin": "2rem",
+                    "container-max": "1280px",
+                    "stack-md": "1.25rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #f9f9ff; scroll-behavior: smooth; }
+        .bg-pattern {
+            background-image: radial-gradient(rgba(0, 43, 92, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #001736 0%, #002b5c 100%);
+        }
+        .card-shadow:hover {
+            box-shadow: 0 20px 40px -12px rgba(0, 43, 92, 0.1);
+        }
+    </style>
+<script>
+    // Smooth scroll for all anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+        // Active nav highlight on scroll
+        const sections = ['hero','business','ingredients','network','contact'];
+        const navLinks = document.querySelectorAll('nav a[data-section]');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-primary','font-bold','border-b-2','border-primary','pb-1');
+                        link.classList.add('text-slate-500','font-medium');
+                    });
+                    const active = document.querySelector(`nav a[data-section="${entry.target.id}"]`);
+                    if (active) {
+                        active.classList.add('text-primary','font-bold','border-b-2','border-primary','pb-1');
+                        active.classList.remove('text-slate-500','font-medium');
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        // Mobile hamburger menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Close on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
+    });
+
+    function scrollTo(id) {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+</script>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-white/95 backdrop-blur-md font-inter antialiased tracking-tight sticky top-0 z-50 border-b border-slate-100 transition-all">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<a href="#hero" onclick="scrollTo('hero'); return false;" class="text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
+<span class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white text-sm">DK</span>
+<span>BIO</span>
+</a>
+<nav class="hidden md:flex items-center space-x-10">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all" href="#hero" data-section="hero" onclick="scrollTo('hero'); return false;">Home</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#business" data-section="business" onclick="scrollTo('business'); return false;">Business</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#ingredients" data-section="ingredients" onclick="scrollTo('ingredients'); return false;">Ingredients</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#network" data-section="network" onclick="scrollTo('network'); return false;">Network</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#contact" data-section="contact" onclick="scrollTo('contact'); return false;">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<button onclick="scrollTo('contact')" class="bg-primary text-white px-7 py-2.5 rounded-full text-label-sm font-bold hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Request Quote</button>
+<!-- Hamburger: mobile only -->
+<button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="메뉴 열기">
+<span class="w-6 h-0.5 bg-primary block"></span>
+<span class="w-6 h-0.5 bg-primary block"></span>
+<span class="w-6 h-0.5 bg-primary block"></span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 flex flex-col gap-4 text-sm font-medium">
+<a href="#hero" onclick="scrollTo('hero')" class="text-primary font-bold">Home</a>
+<a href="#business" onclick="scrollTo('business')" class="text-slate-600 hover:text-primary">Business</a>
+<a href="#ingredients" onclick="scrollTo('ingredients')" class="text-slate-600 hover:text-primary">Ingredients</a>
+<a href="#network" onclick="scrollTo('network')" class="text-slate-600 hover:text-primary">Network</a>
+<a href="#contact" onclick="scrollTo('contact')" class="text-slate-600 hover:text-primary">Contact</a>
+</div>
+</header>
+<main>
+<!-- Section 1: Hero -->
+<section id="hero" class="relative min-h-[85vh] flex items-center overflow-hidden hero-gradient">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-30" alt="Modern high-tech laboratory with sterile white surfaces" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80&auto=format&fit=crop"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary/60 to-transparent"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-8 w-full z-10 py-20">
+<div class="max-w-3xl">
+<span class="inline-flex items-center gap-2 py-1.5 px-4 bg-white/10 backdrop-blur-md text-white text-label-sm rounded-full mb-stack-md border border-white/20">
+<span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+Global Cosmetic Ingredient Distributor
+</span>
+<h1 class="font-display-xl text-display-xl text-white mb-stack-lg leading-[1.1]">글로벌 화장품 원료 소싱의<br/><span class="text-primary-fixed-dim">신뢰할 수 있는 파트너</span></h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-stack-lg max-w-2xl">
+                        다미화학(DAMY Chemical)과 라비오(LABIO)의 축적된 기술력을 기반으로 전 세계 우수한 화장품 원료를 국내 시장에 가장 빠르고 정확하게 연결합니다.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a href="https://damychem.com" target="_blank" rel="noopener" class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all inline-flex items-center gap-2">DAMY Chemical <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+<a href="https://www.labio.kr" target="_blank" rel="noopener" class="backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all inline-flex items-center gap-2">LABIO <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Business Areas -->
+<section id="business" class="py-section-gap bg-surface relative overflow-hidden bg-pattern">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-section-gap gap-6">
+<div class="max-w-2xl">
+<div class="flex items-center gap-4 mb-4">
+<span class="h-1 w-12 bg-primary rounded-full"></span>
+<span class="font-label-sm text-primary uppercase tracking-[0.2em]">Our Excellence</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">핵심 역량 및 서비스 영역</h2>
+<p class="font-body-lg text-body-lg text-secondary">
+                            국내 화장품 연구개발 니즈를 선제적으로 파악하여 검증된 글로벌 제조사와의 긴밀한 파트너십으로 최적의 솔루션을 제공합니다.
+                        </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Strength 1 -->
+<div class="group bg-white p-10 rounded-xl border border-slate-100 card-shadow transition-all duration-300 hover:-translate-y-2 flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/5 rounded-bl-full transition-all group-hover:scale-150 group-hover:bg-primary/5"></div>
+<div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center mb-stack-lg transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">speed</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">빠른 소싱 (Fast Sourcing)</h3>
+<p class="font-body-md text-body-md text-secondary flex-grow">요청 후 24시간 내 1차 대응 체계를 구축하여 신제품 개발 사이클을 획기적으로 단축합니다.</p>
+</div>
+<!-- Strength 2 -->
+<div class="group bg-white p-10 rounded-xl border border-slate-100 card-shadow transition-all duration-300 hover:-translate-y-2 flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/5 rounded-bl-full transition-all group-hover:scale-150 group-hover:bg-primary/5"></div>
+<div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center mb-stack-lg transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">글로벌 공급망 (Global Network)</h3>
+<p class="font-body-md text-body-md text-secondary flex-grow">중국, 일본, 인도 등 글로벌 전역의 원료 제조사와 직접 연결하여 가격 경쟁력과 안정성을 동시에 확보합니다.</p>
+</div>
+<!-- Strength 3 -->
+<div class="group bg-white p-10 rounded-xl border border-slate-100 card-shadow transition-all duration-300 hover:-translate-y-2 flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/5 rounded-bl-full transition-all group-hover:scale-150 group-hover:bg-primary/5"></div>
+<div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center mb-stack-lg transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">산업 전문성 (Expertise)</h3>
+<p class="font-body-md text-body-md text-secondary flex-grow">37년간 쌓아온 업계 네트워크와 기술적 이해도를 바탕으로 단순 유통 이상의 R&amp;D 서포트를 수행합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Ingredient Categories -->
+<section id="ingredients" class="py-section-gap bg-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="font-label-sm text-primary-container uppercase tracking-widest block mb-4">Product Categories</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-sm">Ingredient Solutions</h2>
+<div class="h-1.5 w-16 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Big Cat 1 -->
+<div class="md:col-span-8 bg-surface-container-low p-10 rounded-2xl relative group overflow-hidden border border-slate-100 transition-all hover:bg-white card-shadow">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform block">clinical_notes</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-3">안티에이징 (Anti-aging)</h4>
+<p class="font-body-md text-secondary max-w-md">바이오 기술 기반의 주름 개선 및 피부 재생, 탄력 강화 고기능성 원료 솔루션</p>
+</div>
+<div class="absolute -bottom-10 -right-10 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-700">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+</div>
+<!-- Cat 2 -->
+<div class="md:col-span-4 bg-surface-container-low p-10 rounded-2xl relative group overflow-hidden border border-slate-100 transition-all hover:bg-white card-shadow">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">brightness_high</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">미백 &amp; 브라이트닝</h4>
+<p class="font-body-md text-secondary">피부 톤 개선 및 멜라닌 억제 소재</p>
+</div>
+<div class="absolute -bottom-6 -right-6 opacity-[0.03] group-hover:opacity-[0.08] transition-all">
+<span class="material-symbols-outlined text-[180px]" style="font-variation-settings: 'FILL' 1;">flare</span>
+</div>
+</div>
+<!-- Cat 3 -->
+<div class="md:col-span-4 bg-surface-container-low p-10 rounded-2xl relative group overflow-hidden border border-slate-100 transition-all hover:bg-white card-shadow">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">dry_cleaning</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">헤어 &amp; 두피 케어</h4>
+<p class="font-body-md text-secondary">탈모 방지 및 모근 강화 특화 원료</p>
+</div>
+</div>
+<!-- Cat 4 -->
+<div class="md:col-span-4 bg-surface-container-low p-10 rounded-2xl relative group overflow-hidden border border-slate-100 transition-all hover:bg-white card-shadow">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">health_and_safety</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">진정 &amp; 피부장벽</h4>
+<p class="font-body-md text-secondary">민감성 피부를 위한 진정 소재</p>
+</div>
+</div>
+<!-- Cat 5 (Special highlight) -->
+<div class="md:col-span-4 bg-primary text-white p-10 rounded-2xl relative group overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]">
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">science</span>
+<h4 class="font-headline-md text-headline-md text-white mb-2">기능성 특화 소재</h4>
+<p class="font-body-md text-white/70">제형 최적화 및 유효성분 전달</p>
+<div class="mt-auto pt-6">
+<span class="text-xs tracking-widest text-primary-fixed-dim uppercase font-bold">Innovation Focus</span>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Global Network (Redesigned) -->
+<section id="network" class="py-section-gap bg-surface-container-low overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="inline-block py-1 px-3 bg-primary text-white text-[11px] font-bold tracking-widest rounded uppercase mb-6">Global Presence</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">글로벌 소싱 네트워크</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">
+                            대륙별 주요 원료 거점과의 직접 소싱 체계를 통해 고객사 브랜드의 글로벌 경쟁력을 높이는 최상의 원료 포트폴리오를 제공합니다.
+                        </p>
+<div class="space-y-4">
+<!-- Country 1 -->
+<div class="group flex items-start gap-6 p-6 bg-white rounded-2xl border border-slate-100 hover:border-primary/20 transition-all card-shadow">
+<div class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-xl text-primary font-bold group-hover:bg-primary group-hover:text-white transition-all">JP</div>
+<div>
+<h4 class="font-bold text-primary mb-1">일본 (Japan)</h4>
+<p class="font-body-md text-secondary text-sm">엄격한 품질 관리 기반의 프리미엄 기능성 원료 및 특수 제형 기술 원료</p>
+</div>
+</div>
+<!-- Country 2 -->
+<div class="group flex items-start gap-6 p-6 bg-white rounded-2xl border border-slate-100 hover:border-primary/20 transition-all card-shadow">
+<div class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-xl text-primary font-bold group-hover:bg-primary group-hover:text-white transition-all">IN</div>
+<div>
+<h4 class="font-bold text-primary mb-1">인도 (India)</h4>
+<p class="font-body-md text-secondary text-sm">천연 추출물 및 가격 경쟁력이 탁월한 바이오 활성 성분 파이프라인</p>
+</div>
+</div>
+<!-- Country 3 -->
+<div class="group flex items-start gap-6 p-6 bg-white rounded-2xl border border-slate-100 hover:border-primary/20 transition-all card-shadow">
+<div class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-xl text-primary font-bold group-hover:bg-primary group-hover:text-white transition-all">CN</div>
+<div>
+<h4 class="font-bold text-primary mb-1">중국 (China)</h4>
+<p class="font-body-md text-secondary text-sm">대규모 생산 인프라를 통한 범용 원료의 안정적 대량 공급 및 경쟁력 있는 단가</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative lg:translate-x-12">
+<div class="relative bg-white p-8 rounded-3xl card-shadow border border-slate-100">
+<img class="w-full h-auto object-contain opacity-90 mix-blend-multiply" alt="Abstract world map visualization" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80&auto=format&fit=crop"/>
+<div class="absolute top-[40%] left-[75%] w-4 h-4 bg-primary/30 rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full animate-ping"></div>
+</div>
+<div class="absolute top-[35%] left-[82%] w-4 h-4 bg-primary/30 rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+</div>
+<div class="absolute top-[50%] left-[70%] w-4 h-4 bg-primary/30 rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -z-10 -top-8 -right-8 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: R&D & Infrastructure (Enhanced) -->
+<section class="py-section-gap bg-primary-container text-white relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+<div class="max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-6xl mb-8 text-primary-fixed-dim inline-block animate-bounce-slow" style="animation: bounce 3s infinite;">corporate_fare</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">R&amp;D 및 그룹 인프라의 시너지</h2>
+<p class="font-body-lg text-body-lg text-white/80 leading-relaxed mb-16">
+                        디케이바이오는 다미화학(DAMY Chemical)과 라비오(LABIO)의 37년 업력 인프라를 공유합니다. 축적된 분석 데이터와 공정 기술을 유통 시스템에 결합하여 단순한 공급을 넘어 제품 개발의 기술적 가이드를 함께 제안합니다.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="group p-12 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 transition-all cursor-default">
+<div class="text-3xl font-black italic tracking-tighter mb-4 text-white group-hover:text-primary-fixed-dim transition-colors">DAMY Chemical</div>
+<p class="text-sm text-white/60">37년 전통의 화장품 화학 전문 인프라</p>
+</div>
+<div class="group p-12 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 transition-all cursor-default">
+<div class="text-3xl font-black italic tracking-tighter mb-4 text-white group-hover:text-primary-fixed-dim transition-colors">LABIO</div>
+<p class="text-sm text-white/60">바이오 컨버전스 기술 기반 신소재 연구소</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Contact CTA -->
+<section id="contact" class="py-20 bg-white">
+<div class="max-w-5xl mx-auto px-8">
+<div class="bg-surface rounded-[2rem] p-12 md:p-16 text-center border border-slate-100 card-shadow flex flex-col items-center">
+<h3 class="font-headline-lg text-primary mb-6">프로젝트에 최적인 원료를 찾고 계신가요?</h3>
+<p class="text-secondary font-body-lg mb-10 max-w-2xl">원하시는 기능성과 타겟 단가에 맞춰 전 세계 원료사에서 가장 적합한 옵션을 제안해 드립니다.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="mailto:info@dkbio.co.kr" class="bg-primary text-white px-10 py-4 rounded-xl font-bold hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>문의하기
+</a>
+<a class="flex items-center gap-3 px-10 py-4 font-bold text-primary hover:bg-primary-container/5 rounded-xl transition-all" href="tel:+827075760387">
+<span class="material-symbols-outlined">call</span> +82 70 7576 0387
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 text-slate-400 py-16 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+<div class="lg:col-span-4">
+<div class="text-2xl font-black text-white tracking-tighter flex items-center gap-2 mb-6">
+<span class="w-8 h-8 bg-white text-slate-950 rounded flex items-center justify-center text-sm">DK</span>
+<span>BIO</span>
+</div>
+<p class="text-sm leading-relaxed max-w-sm mb-8">
+                            (주)디케이바이오는 글로벌 화장품 산업의 중심에서 원료와 고객사를 잇는 가장 신뢰받는 연결고리가 되겠습니다.
+                        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all" href="#hero" onclick="scrollTo('hero'); return false;" title="홈으로">
+<span class="material-symbols-outlined text-sm">language</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all" href="mailto:info@dkbio.co.kr">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Office</h5>
+<div class="space-y-4 text-sm">
+<p class="leading-relaxed">서울특별시 구로구 중앙로3길 12,<br/>서봉빌딩 603호 (08225)</p>
+<p>TEL: +82 70 7576 0387</p>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Links</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors inline-flex items-center gap-1.5" href="https://damychem.com" target="_blank" rel="noopener">DAMY Chemical <span class="material-symbols-outlined text-xs">open_in_new</span></a></li>
+<li><a class="hover:text-white transition-colors inline-flex items-center gap-1.5" href="https://www.labio.kr" target="_blank" rel="noopener">LABIO <span class="material-symbols-outlined text-xs">open_in_new</span></a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] uppercase tracking-widest font-bold">
+<div>© 2025 DK BIO CO., LTD. ALL RIGHTS RESERVED.</div>
+<div class="text-slate-600">Business Reg: 123-45-67890</div>
+</div>
+</div>
+</footer>
+</body></html>
