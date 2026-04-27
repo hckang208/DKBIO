@@ -1,0 +1,1419 @@
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DK BIO — Ingredient Portfolio 2026</title>
+
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F8F5F0;
+    --white: #FDFCFA;
+    --ink: #1C1917;
+    --ink-50: rgba(28,25,23,0.5);
+    --ink-20: rgba(28,25,23,0.12);
+    --ink-08: rgba(28,25,23,0.06);
+    --gold: #B08D57;
+    --gold-pale: #EDE3D4;
+    --navy: #0F2137;
+    --navy-80: rgba(15,33,55,0.8);
+    --red: #C0392B;
+    --sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    --serif: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    font-weight: 400;
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title { font-weight: 600; }
+  .sec-title { font-weight: 600; }
+  .td-product { font-weight: 600; }
+
+  .hero-body,
+  .sec-desc,
+  .td-func,
+  .cta-body,
+  .spotlight-body {
+    font-weight: 400;
+  }
+
+  .td-supplier, .td-inci { font-weight: 500; }
+
+  /* ── WRAPPER ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 0 80px rgba(0,0,0,0.08);
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 3px double var(--ink-20);
+    padding: 2.5rem 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  .masthead-meta {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  .masthead-issue {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: right;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  .masthead-title {
+    text-align: center;
+    border-top: 1px solid var(--ink-20);
+    border-bottom: 1px solid var(--ink-20);
+    padding: 1.2rem 0;
+    margin-bottom: 1.2rem;
+  }
+  .masthead-brand {
+    font-family: var(--serif);
+    font-size: 3.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--navy);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .masthead-brand span {
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .masthead-tagline {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+  .masthead-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .masthead-headline {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink-50);
+  }
+  .masthead-divider {
+    height: 1px;
+    background: var(--ink-20);
+    flex: 1;
+    margin: 0 1.2rem;
+  }
+  .masthead-contact {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-50);
+    text-align: right;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  /* ── HERO STRIP ── */
+  .hero-strip {
+    background: var(--navy);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-strip::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(176,141,87,0.08);
+  }
+  .hero-strip::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40%;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(176,141,87,0.05);
+  }
+  .hero-kicker {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 500;
+  }
+  .hero-kicker::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    max-width: 520px;
+  }
+  .hero-title em { color: var(--gold); font-style: normal; }
+  .hero-body {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(253,252,250,0.7);
+    max-width: 540px;
+    margin-bottom: 2rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-stat-n {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+  }
+  .hero-stat-l {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(253,252,250,0.5);
+    margin-top: 0.25rem;
+    font-weight: 400;
+  }
+  .hero-stat-sep { width: 1px; background: rgba(255,255,255,0.1); }
+
+  /* ── CONTENT AREA ── */
+  .content { padding: 0 3rem; }
+
+  /* ── SECTION HEADER ── */
+  .sec-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 2rem 0 1.2rem;
+    border-bottom: 1px solid var(--ink-20);
+    margin-bottom: 1.5rem;
+  }
+  .sec-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ink-20);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .sec-info { flex: 1; }
+  .sec-label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+  }
+  .sec-title {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .sec-title em { font-style: normal; }
+  .sec-desc {
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--ink-50);
+    margin-left: auto;
+    max-width: 240px;
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  /* ── INGREDIENT TABLE ── */
+  .ing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+  }
+  .ing-table thead tr {
+    border-bottom: 2px solid var(--ink);
+  }
+  .ing-table thead th {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--ink);
+    padding: 0.5rem 0.75rem 0.6rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  .ing-table thead th:first-child { padding-left: 0; }
+  .ing-table tbody tr {
+    border-bottom: 1px solid var(--ink-08);
+    transition: background 0.15s;
+  }
+  .ing-table tbody tr:hover { background: var(--cream); }
+  .ing-table tbody td {
+    padding: 0.8rem 0.75rem;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .ing-table tbody td:first-child { padding-left: 0; }
+  .td-product {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .td-inci {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink);
+    font-weight: 600;
+    opacity: 0.55;
+  }
+  .td-func {
+    color: var(--ink);
+    font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .td-supplier {
+    font-size: 0.78rem;
+    color: var(--ink);
+    opacity: 0.55;
+    font-weight: 600;
+  }
+  .td-country {
+    text-align: center;
+  }
+  .flag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--ink-20);
+    color: var(--ink-50);
+    white-space: nowrap;
+  }
+  .flag.jp { border-color: #BC002D; color: #BC002D; }
+  .flag.cn { border-color: #DE2910; color: #DE2910; }
+  .flag.kr { border-color: #003478; color: #003478; }
+  .highlight-row td { background: var(--gold-pale) !important; }
+  .new-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.1rem 0.4rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .hot-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--red);
+    color: var(--white);
+    padding: 0.1rem 0.4rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  /* ── SPOTLIGHT CARD (featured item) ── */
+  .spotlight {
+    border: 1px solid var(--ink-20);
+    padding: 1.8rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    background: var(--cream);
+  }
+  .spotlight::before {
+    content: 'SPOTLIGHT';
+    position: absolute;
+    top: -0.55rem; left: 1.5rem;
+    background: var(--white);
+    padding: 0 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+  }
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .spotlight-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+  .spotlight-sub {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .spotlight-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--ink-50);
+  }
+  .spotlight-specs { display: flex; flex-direction: column; gap: 0.6rem; }
+  .spec-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--ink-08);
+  }
+  .spec-key {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    min-width: 80px;
+    font-weight: 500;
+  }
+  .spec-val {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink-20);
+    margin: 0.5rem 0 0;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--gold-pale);
+  }
+  .pullquote p {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.65;
+  }
+
+  /* ── CTA FOOTER ── */
+  .cta-block {
+    background: var(--navy);
+    padding: 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .cta-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+  .cta-title em { font-style: normal; color: var(--gold); }
+  .cta-body {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: rgba(253,252,250,0.6);
+    line-height: 1.65;
+  }
+  .cta-btns { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-end; }
+  .cta-btn {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .cta-btn.primary { background: var(--gold); color: var(--ink); }
+  .cta-btn.secondary { border: 1px solid rgba(255,255,255,0.15); color: rgba(253,252,250,0.6); }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 1.5rem 3rem;
+    border-top: 1px solid var(--ink-08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+  }
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--navy);
+    text-transform: uppercase;
+  }
+  .footer-info {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-50);
+    text-align: right;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  /* ── CATEGORY BADGE ROW ── */
+  .cat-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 1.2rem 3rem;
+    border-bottom: 1px solid var(--ink-08);
+    background: var(--white);
+  }
+  .cat-badge {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--ink-20);
+    color: var(--ink-50);
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+  .cat-badge:hover, .cat-badge.active {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .masthead, .content, .cta-block, .footer, .cat-nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero-strip { padding: 2rem 1.5rem; }
+    .masthead-brand { font-size: 2.5rem; letter-spacing: 0.2em; }
+    .hero-title { font-size: 1.9rem; }
+    .spotlight-grid, .cta-block { grid-template-columns: 1fr; }
+    .cta-btns { align-items: flex-start; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .ing-table { font-size: 0.75rem; }
+    .masthead-top { flex-direction: column; gap: 0.5rem; }
+    .sec-header { flex-wrap: wrap; }
+    .sec-desc { max-width: 100%; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── MASTHEAD ── -->
+  <div class="masthead">
+    <div class="masthead-top">
+      <div class="masthead-meta">
+        발행: (주)디케이바이오<br>
+        서울 구로구 중앙로3길 12, 서봉빌딩 603호
+      </div>
+      <div class="masthead-issue">
+        Vol. 01 · 2026년 상반기<br>
+        Ingredient Portfolio Brief
+      </div>
+    </div>
+    <div class="masthead-title">
+      <div class="masthead-brand">DK <span>BIO</span></div>
+      <div class="masthead-tagline">Global Cosmetic Ingredient Distributor · Since 2024</div>
+    </div>
+    <div class="masthead-sub">
+      <div class="masthead-headline">글로벌 원료 포트폴리오 브리핑 — 2026 상반기</div>
+      <div class="masthead-divider"></div>
+      <div class="masthead-contact">
+        info@dkbio.co.kr<br>
+        +82 70 7576 0387
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CATEGORY NAV ── -->
+  <div class="cat-nav">
+    <span class="cat-badge active">All</span>
+    <span class="cat-badge">Anti-Aging</span>
+    <span class="cat-badge">Brightening</span>
+    <span class="cat-badge">Hydration</span>
+    <span class="cat-badge">Soothing</span>
+    <span class="cat-badge">Antioxidant</span>
+    <span class="cat-badge">Hair Care</span>
+    <span class="cat-badge">Fermentation</span>
+    <span class="cat-badge">Surfactants</span>
+    <span class="cat-badge">Polymers</span>
+    <span class="cat-badge">UV Filters</span>
+    <span class="cat-badge">Preservatives</span>
+  </div>
+
+  <!-- ── HERO STRIP ── -->
+  <div class="hero-strip">
+    <div class="hero-kicker">2026 상반기 포트폴리오 브리핑</div>
+    <h1 class="hero-title">검증된 글로벌 원료,<br><em>빠른 소싱 · 정확한 연결</em></h1>
+    <p class="hero-body">
+      다미화학과 라비오의 37년 인프라를 기반으로, 중국·일본·인도 파트너사의 기능성 원료를 국내 화장품 R&D팀에 직접 연결합니다. 본 브리핑은 2026년 상반기 주요 공급 가능 원료를 카테고리별로 정리한 자료입니다.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-n">70+</div>
+        <div class="hero-stat-l">공급 원료</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-n">8</div>
+        <div class="hero-stat-l">카테고리</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-n">JP · CN</div>
+        <div class="hero-stat-l">소싱 국가</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-n">24h</div>
+        <div class="hero-stat-l">1차 대응</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <div class="content">
+
+    <!-- ════ 1-A. ANTI-AGING ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1A</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-A</div>
+        <div class="sec-title">Anti-Aging / <em>Regeneration</em></div>
+      </div>
+      <div class="sec-desc">세포 재생·항노화·콜라겐 합성 타겟 고기능성 원료</div>
+    </div>
+
+    <!-- Spotlight -->
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">CELLAMENT™</div>
+          <div class="spotlight-sub">IntegriCulture · 일본</div>
+          <p class="spotlight-body">
+            세계 최초 세포 배양 기술 기반 성장인자 복합체. 기존 EGF/FGF 단일 성분 대비 피부 재생 시너지가 현저히 높으며, 일본 후생성 규격 충족 원료입니다. K-뷰티 프리미엄 라인 제형 설계에 최적.
+          </p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Cell Culture Derived Growth Factors</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">세포 재생 / 안티에이징</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val"><span class="flag jp">JP</span> 일본</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">앰플, 세럼, 패드</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">PDRN (Sodium DNA)<span class="hot-badge">HOT</span></td>
+          <td class="td-inci">Sodium DNA</td>
+          <td class="td-func">세포 재생 / 항노화 / 보습</td>
+          <td class="td-supplier">Noyain</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Vegan PDRN-tFNA<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Sodium DNA (사면체 나노)</td>
+          <td class="td-func">비건 PDRN / 재생</td>
+          <td class="td-supplier">Trautec</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Permea-Col III-S001</td>
+          <td class="td-inci">Recombinant Type III Collagen</td>
+          <td class="td-func">재조합 콜라겐 / 장벽 수복</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">MiniReCol® III/IV/VII</td>
+          <td class="td-inci">재조합 소분자 콜라겐</td>
+          <td class="td-func">항노화 / 재생</td>
+          <td class="td-supplier">Trautec</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Acetyl Hexapeptide-8</td>
+          <td class="td-inci">Argireline</td>
+          <td class="td-func">주름 개선 (보톡스 유사)</td>
+          <td class="td-supplier">Sichuan Jisheng</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Copper Tripeptide-1</td>
+          <td class="td-inci">GHK-Cu</td>
+          <td class="td-func">콜라겐 합성 / 재생</td>
+          <td class="td-supplier">Sichuan Jisheng / JY Med</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">PDRN + Ergothioneine</td>
+          <td class="td-inci">PDRN + Ergothioneine 복합</td>
+          <td class="td-func">항산화 / 세포 재생</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">ResverAQUA<span class="new-badge">NEW</span></td>
+          <td class="td-inci">레스베라트롤 / 사과 줄기세포</td>
+          <td class="td-func">항노화 / 항산화</td>
+          <td class="td-supplier">Mitsui Chemicals</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Bakuchiol Water</td>
+          <td class="td-inci">Bakuchiol</td>
+          <td class="td-func">레티놀 대체 / 항노화</td>
+          <td class="td-supplier">LBH Inc.</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Secretome Extract® Nano</td>
+          <td class="td-inci">세크리톰 (줄기세포 배양액)</td>
+          <td class="td-func">재생 / 항노화</td>
+          <td class="td-supplier">Tele-Bio</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Triple Helix Collagen FD</td>
+          <td class="td-inci">삼중나선형 콜라겐</td>
+          <td class="td-func">재생 / 탄력</td>
+          <td class="td-supplier">Taki Chemical</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1-B. BRIGHTENING ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1B</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-B</div>
+        <div class="sec-title">Brightening / <em>Whitening</em></div>
+      </div>
+      <div class="sec-desc">미백·브라이트닝·톤업 기능성 원료</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">GO-VC® (10W)<span class="hot-badge">HOT</span></td>
+          <td class="td-inci">Vitamin C 유도체</td>
+          <td class="td-func">미백 / 항산화 (안정성 우수)</td>
+          <td class="td-supplier">ITO Co.</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Niacinamide</td>
+          <td class="td-inci">Niacinamide (Vit B3)</td>
+          <td class="td-func">미백 / 모공 / 장벽 강화</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Nonapeptide-1</td>
+          <td class="td-inci">Nonapeptide-1</td>
+          <td class="td-func">미백 펩타이드</td>
+          <td class="td-supplier">JY Med Peptide</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BEN-063S / BEN-064S</td>
+          <td class="td-inci">Rice / Coix Ferment Filtrate</td>
+          <td class="td-func">미백 / 광채 / 항당화</td>
+          <td class="td-supplier">Bien Biotechnology</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">FMRE / FBLE</td>
+          <td class="td-inci">Mulberry Root / Banjiro Leaf</td>
+          <td class="td-func">미백 / 항산화</td>
+          <td class="td-supplier">Fuji Sangyo</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1-C. HYDRATION ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1C</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-C</div>
+        <div class="sec-title">Hydration / <em>Moisture</em></div>
+      </div>
+      <div class="sec-desc">보습·수분 유지·장벽 강화 원료</div>
+    </div>
+
+    <div class="pullquote">
+      <p>"저분자 HA, 피브로넥틴, 폴리글루탐산 등 차세대 보습 소재까지 포트폴리오를 확장 중입니다. 단순 보습재 이상의 기능성을 원하는 브랜드에 적합합니다."</p>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-product">Sodium Hyaluronate</td>
+          <td class="td-inci">Sodium Hyaluronate</td>
+          <td class="td-func">보습 / 진정</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="td-product">HA 800 / HA 2000<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Hydrolyzed Sodium Hyaluronate</td>
+          <td class="td-func">저분자 보습 / 재생</td>
+          <td class="td-supplier">Hong Kang</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Trepoly-01S</td>
+          <td class="td-inci">Tremella Fuciformis Polysaccharide</td>
+          <td class="td-func">고보습 / 항산화</td>
+          <td class="td-supplier">Bien Biotechnology</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">ECMhydro PGA/HA</td>
+          <td class="td-inci">Sodium Polyglutamate + HA Crosspolymer</td>
+          <td class="td-func">고보습 / 재생</td>
+          <td class="td-supplier">BioACT</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">OsrFN</td>
+          <td class="td-inci">Recombinant Fibronectin</td>
+          <td class="td-func">수복 / 항주름</td>
+          <td class="td-supplier">Wu Han Healthgen</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">S-100 / VG-100 / S-100HA</td>
+          <td class="td-inci">환원성 이온수 / HA 리퀴드</td>
+          <td class="td-func">보습 / 항산화</td>
+          <td class="td-supplier">A.I. System Products</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1-D. SOOTHING ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1D</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-D</div>
+        <div class="sec-title">Soothing / <em>Barrier</em></div>
+      </div>
+      <div class="sec-desc">진정·항염·피부장벽 강화 원료</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">Tangola™ Gentiana Scabra<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Gentiana Macrophylla Extract</td>
+          <td class="td-func">항염 / 진정 / 항알레르기</td>
+          <td class="td-supplier">Zhong Ke Zhong Zhi</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BotaniCellar™ Eryngium</td>
+          <td class="td-inci">Eryngium Callus Extract</td>
+          <td class="td-func">장벽 강화 / 진정</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Rosa Aura FF</td>
+          <td class="td-inci">Bifida + Rose Fermentation</td>
+          <td class="td-func">항산화 / 진정</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BEN-091S</td>
+          <td class="td-inci">Bifida + Artemisia Annua</td>
+          <td class="td-func">항여드름 / 진정</td>
+          <td class="td-supplier">Bien Biotechnology</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Marine Silt FP-S</td>
+          <td class="td-inci">해양성 미네랄 복합체</td>
+          <td class="td-func">미네랄 / 장벽 강화</td>
+          <td class="td-supplier">ENCORE ANN</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">OsrhLYZ</td>
+          <td class="td-inci">Recombinant Lysozyme</td>
+          <td class="td-func">항균 / 여드름 완화</td>
+          <td class="td-supplier">Wu Han Healthgen</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1-E. ANTIOXIDANT ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1E</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-E</div>
+        <div class="sec-title">Antioxidant / <em>Botanical</em></div>
+      </div>
+      <div class="sec-desc">항산화·식물 유래 고기능 소재</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">BotaniCellar™ Edelweiss<span class="hot-badge">HOT</span></td>
+          <td class="td-inci">Leontopodium Callus Extract</td>
+          <td class="td-func">항노화 / 미백</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Tangola® Cordyceps Sinensis</td>
+          <td class="td-inci">동충하초 추출물</td>
+          <td class="td-func">항노화 / 면역</td>
+          <td class="td-supplier">Zhong Ke Zhong Zhi</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Tangola™ Seabuckthorn OPC</td>
+          <td class="td-inci">Hippophae Rhamnoides Fruit</td>
+          <td class="td-func">항산화 / 브라이트닝</td>
+          <td class="td-supplier">Zhong Ke Zhong Zhi</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Aomikan / Green Rooibos</td>
+          <td class="td-inci">청귤 / 루이보스 분말</td>
+          <td class="td-func">항산화 / 세포 보호</td>
+          <td class="td-supplier">Nikken Foods</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1-F. HAIR ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1F</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-F</div>
+        <div class="sec-title">Hair &amp; Scalp / <em>Care</em></div>
+      </div>
+      <div class="sec-desc">탈모·모근·두피 케어 특화 원료</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">SRHC® Type XVII<span class="hot-badge">HOT</span></td>
+          <td class="td-inci">재조합 XVII형 콜라겐</td>
+          <td class="td-func">탈모 방지 / 항노화</td>
+          <td class="td-supplier">Trautec</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Recombinant Type XVII Collagen</td>
+          <td class="td-inci">Recombinant Type XVII Collagen</td>
+          <td class="td-func">탈모 방지 / 모낭 재생</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Biota Orientalis Extract</td>
+          <td class="td-inci">측백엽 추출물</td>
+          <td class="td-func">탈모 방지 / 항균</td>
+          <td class="td-supplier">Shang Hai Zhi Na</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1-G. FERMENTATION ════ -->
+    <div class="sec-header">
+      <div class="sec-num">1G</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-G</div>
+        <div class="sec-title">Fermentation / <em>Bio-tech</em></div>
+      </div>
+      <div class="sec-desc">발효·바이오 컨버전스 소재</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">DK-DES / MELavo<span class="new-badge">NEW</span></td>
+          <td class="td-inci">자체 개발 기능성 원료</td>
+          <td class="td-func">기능성 활성 (DK BIO 독점)</td>
+          <td class="td-supplier">DKBIO</td>
+          <td class="td-country"><span class="flag kr">KR</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">RICETECT®</td>
+          <td class="td-inci">쌀 발효 원료</td>
+          <td class="td-func">보습 / 장벽 강화</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Type K2 / HK2 Ferment</td>
+          <td class="td-inci">홍조류 유래 기능성 원료</td>
+          <td class="td-func">항산화 / 재생</td>
+          <td class="td-supplier">Hokkaido Science Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Dendrobium / Ginseng Ferment</td>
+          <td class="td-inci">석곡 / 인삼 발효액</td>
+          <td class="td-func">보습 / 항노화 / 항산화</td>
+          <td class="td-supplier">Cn-Ferment</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">NanoSphere® EXO</td>
+          <td class="td-inci">나노스피어 캐리어</td>
+          <td class="td-func">전달체 / 활성성분 캐리어</td>
+          <td class="td-supplier">ITO Co.</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 2. SURFACTANTS ════ -->
+    <div class="sec-header">
+      <div class="sec-num">02</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 2</div>
+        <div class="sec-title">Surfactants / <em>Emulsifiers</em></div>
+      </div>
+      <div class="sec-desc">아미노산계·실리콘계 계면활성·유화 원료</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-product">CSPUJI LL01-95</td>
+          <td class="td-inci">Lauroyl Lysine</td>
+          <td class="td-func">아미노산계 파우더 / 소수성</td>
+          <td class="td-supplier">Chang Sha PU JI</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CSPUJI YC03H-30/95</td>
+          <td class="td-inci">Potassium Cocoyl Glycinate</td>
+          <td class="td-func">아미노산계 음이온 계면활성제</td>
+          <td class="td-supplier">Chang Sha PU JI</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CSPUJI DG02H-95</td>
+          <td class="td-inci">Sodium Stearoyl Glutamate</td>
+          <td class="td-func">아미노산계 유화제</td>
+          <td class="td-supplier">Chang Sha PU JI</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="td-product">JMIX® WO-MOMO / OW-LCB<span class="new-badge">NEW</span></td>
+          <td class="td-inci">W/O 및 O/W 유화 프리믹스</td>
+          <td class="td-func">차세대 유화 베이스</td>
+          <td class="td-supplier">JC Dermatology Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">SQ-SE 1090 / 1200</td>
+          <td class="td-inci">Cetyl PEG/PPG Methicone</td>
+          <td class="td-func">실리콘계 W/O 유화제</td>
+          <td class="td-supplier">ShengQing Materials</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 3. POLYMERS ════ -->
+    <div class="sec-header">
+      <div class="sec-num">03</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 3</div>
+        <div class="sec-title">Polymers / <em>Texture</em></div>
+      </div>
+      <div class="sec-desc">점증·제형 설계·감촉 개선 소재</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-product">SQ-EM 35N</td>
+          <td class="td-inci">Polyacrylamide 역상 에멀전</td>
+          <td class="td-func">점증 / 유화 (Sepigel 305 대체)</td>
+          <td class="td-supplier">ShengQing Materials</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="td-product">Airlica™<span class="hot-badge">HOT</span></td>
+          <td class="td-inci">Silica Silylate (에어로젤)</td>
+          <td class="td-func">피지 조절 / SPF 부스팅</td>
+          <td class="td-supplier">Tokuyama</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">EXCÉBEADS™</td>
+          <td class="td-inci">Silica (무다공 구형)</td>
+          <td class="td-func">감촉 개량 / 마이크로플라스틱 대체</td>
+          <td class="td-supplier">Tokuyama</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Godd Ball 시리즈</td>
+          <td class="td-inci">Silica (진구상 다공성)</td>
+          <td class="td-func">감촉 / 피지 흡착 / 소프트포커스</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CELEENA-J / LS</td>
+          <td class="td-inci">Bamboo Cellulose Nano Fiber</td>
+          <td class="td-func">점증 / 감촉 개선</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">N-Fibroin / SP / NL</td>
+          <td class="td-inci">Silk Fibroin (천연/나노)</td>
+          <td class="td-func">감촉 / 매트 / 보습막</td>
+          <td class="td-supplier">Nagasuna mayu</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 4+5. UV / PRESERVATIVES (compact) ════ -->
+    <div class="sec-header">
+      <div class="sec-num">04</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 4 · 5</div>
+        <div class="sec-title">UV Filters &amp; <em>Preservatives</em></div>
+      </div>
+      <div class="sec-desc">자외선 차단 · 방부 시스템 소재</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-product">EHT</td>
+          <td class="td-inci">Ethylhexyl Triazone</td>
+          <td class="td-func">UVB 차단 (유기 자차)</td>
+          <td class="td-supplier">Aurora Chemical</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="td-product">DHHB<span class="hot-badge">HOT</span></td>
+          <td class="td-inci">Diethylamino Hydroxybenzoyl Hexyl Benzoate</td>
+          <td class="td-func">UVA 차단 (광안정성 우수)</td>
+          <td class="td-supplier">Aurora Chemical</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">EASTHEALTH X.O</td>
+          <td class="td-inci">Decyloxazolidinone</td>
+          <td class="td-func">5세대 항균제 (내성 없음)</td>
+          <td class="td-supplier">High Limit (Dingdu)</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Pentylene Glycol</td>
+          <td class="td-inci">1,2-Pentanediol</td>
+          <td class="td-func">방부 보조제 / 보습</td>
+          <td class="td-supplier">Aroma Holly / Sanyo</td>
+          <td class="td-country"><span class="flag cn">CN</span> <span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Levulinic Acid</td>
+          <td class="td-inci">Levulinic Acid (천연)</td>
+          <td class="td-func">천연 방부제 / pH 조절</td>
+          <td class="td-supplier">Aroma Holly</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Bio-based Potassium Sorbate</td>
+          <td class="td-inci">Bio-based Potassium Sorbate</td>
+          <td class="td-func">방부제 (마이크로바이오 유래)</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 6. SPECIALTY ════ -->
+    <div class="sec-header">
+      <div class="sec-num">06</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 6</div>
+        <div class="sec-title">Specialty / <em>Delivery Systems</em></div>
+      </div>
+      <div class="sec-desc">경피 전달·특수 소재·완제 시트</div>
+    </div>
+
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">Soluble Microneedle Patch<span class="new-badge">NEW</span></td>
+          <td class="td-inci">HA + Tirzepatide 마이크로니들</td>
+          <td class="td-func">경피 전달 시스템</td>
+          <td class="td-supplier">Noyain</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Face Mask / Eye-Patch Sheet</td>
+          <td class="td-inci">Silk 시트 / 패치</td>
+          <td class="td-func">완제 시트/패치 마스크 소재</td>
+          <td class="td-supplier">Nagasuna mayu</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Hydrolyzed Keratin</td>
+          <td class="td-inci">Hydrolyzed Keratin</td>
+          <td class="td-func">모발 보수 / 헤어케어</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">SQ-SF102</td>
+          <td class="td-inci">Modified Polysiloxane</td>
+          <td class="td-func">소포제 / 공정 보조제</td>
+          <td class="td-supplier">ShengQing Materials</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div><!-- /content -->
+
+  <!-- ── CTA BLOCK ── -->
+  <div class="cta-block">
+    <div>
+      <div class="cta-title">원하시는 원료가 있으신가요?<br><em>24시간 내 소싱 가능 여부를 확인해 드립니다.</em></div>
+      <p class="cta-body">
+        견적 문의, 샘플 요청, 규격서(TDS/SDS) 요청 모두 아래 연락처로 주시면 됩니다.<br>
+        리스트에 없는 원료도 글로벌 네트워크를 통해 소싱 가능합니다.
+      </p>
+    </div>
+    <div class="cta-btns">
+      <a href="mailto:info@dkbio.co.kr" class="cta-btn primary">이메일 문의</a>
+      <a href="tel:+827075760387" class="cta-btn secondary">+82 70 7576 0387</a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">
+    <div class="footer-brand">DK Bio</div>
+    <div class="footer-info">
+      (주)디케이바이오 · 서울 구로구 중앙로3길 12, 서봉빌딩 603호<br>
+      info@dkbio.co.kr · +82 70 7576 0387 · www.dkbio.co.kr
+    </div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
