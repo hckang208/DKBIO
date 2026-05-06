@@ -114,9 +114,13 @@
         }
     </style>
 <script>
-    // Smooth scroll for all anchor links
+    // scrollToSection: window.scrollTo와 충돌 방지를 위해 함수명 변경
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        // Active nav highlight on scroll
         const sections = ['hero','business','ingredients','network','contact'];
         const navLinks = document.querySelectorAll('nav a[data-section]');
 
@@ -148,36 +152,30 @@
             mobileBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-            // Close on link click
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
             });
         }
     });
-
-    function scrollTo(id) {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
 </script>
 </head>
 <body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-primary">
 <!-- TopNavBar -->
 <header class="bg-white/95 backdrop-blur-md font-inter antialiased tracking-tight sticky top-0 z-50 border-b border-slate-100 transition-all">
 <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-<a href="#hero" onclick="scrollTo('hero'); return false;" class="text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
+<a href="#hero" onclick="scrollToSection('hero'); return false;" class="text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
 <span class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white text-sm">DK</span>
 <span>BIO</span>
 </a>
 <nav class="hidden md:flex items-center space-x-10">
-<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all" href="#hero" data-section="hero" onclick="scrollTo('hero'); return false;">Home</a>
-<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#business" data-section="business" onclick="scrollTo('business'); return false;">Business</a>
-<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#ingredients" data-section="ingredients" onclick="scrollTo('ingredients'); return false;">Ingredients</a>
-<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#network" data-section="network" onclick="scrollTo('network'); return false;">Network</a>
-<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#contact" data-section="contact" onclick="scrollTo('contact'); return false;">Contact</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all" href="#hero" data-section="hero" onclick="scrollToSection('hero'); return false;">Home</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#business" data-section="business" onclick="scrollToSection('business'); return false;">Business</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#ingredients" data-section="ingredients" onclick="scrollToSection('ingredients'); return false;">Ingredients</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#network" data-section="network" onclick="scrollToSection('network'); return false;">Network</a>
+<a class="text-slate-500 font-medium hover:text-primary transition-colors" href="#contact" data-section="contact" onclick="scrollToSection('contact'); return false;">Contact</a>
 </nav>
 <div class="flex items-center gap-3">
-<button onclick="scrollTo('contact')" class="bg-primary text-white px-7 py-2.5 rounded-full text-label-sm font-bold hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Request Quote</button>
+<button onclick="scrollToSection('contact')" class="bg-primary text-white px-7 py-2.5 rounded-full text-label-sm font-bold hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Request Quote</button>
 <!-- Hamburger: mobile only -->
 <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="메뉴 열기">
 <span class="w-6 h-0.5 bg-primary block"></span>
@@ -188,11 +186,11 @@
 </div>
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 flex flex-col gap-4 text-sm font-medium">
-<a href="#hero" onclick="scrollTo('hero')" class="text-primary font-bold">Home</a>
-<a href="#business" onclick="scrollTo('business')" class="text-slate-600 hover:text-primary">Business</a>
-<a href="#ingredients" onclick="scrollTo('ingredients')" class="text-slate-600 hover:text-primary">Ingredients</a>
-<a href="#network" onclick="scrollTo('network')" class="text-slate-600 hover:text-primary">Network</a>
-<a href="#contact" onclick="scrollTo('contact')" class="text-slate-600 hover:text-primary">Contact</a>
+<a href="#hero" onclick="scrollToSection('hero'); return false;" class="text-primary font-bold">Home</a>
+<a href="#business" onclick="scrollToSection('business'); return false;" class="text-slate-600 hover:text-primary">Business</a>
+<a href="#ingredients" onclick="scrollToSection('ingredients'); return false;" class="text-slate-600 hover:text-primary">Ingredients</a>
+<a href="#network" onclick="scrollToSection('network'); return false;" class="text-slate-600 hover:text-primary">Network</a>
+<a href="#contact" onclick="scrollToSection('contact'); return false;" class="text-slate-600 hover:text-primary">Contact</a>
 </div>
 </header>
 <main>
@@ -447,7 +445,7 @@ Global Cosmetic Ingredient Distributor
                             (주)디케이바이오는 글로벌 화장품 산업의 중심에서 원료와 고객사를 잇는 가장 신뢰받는 연결고리가 되겠습니다.
                         </p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all" href="#hero" onclick="scrollTo('hero'); return false;" title="홈으로">
+<a class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all" href="#hero" onclick="scrollToSection('hero'); return false;" title="홈으로">
 <span class="material-symbols-outlined text-sm">language</span>
 </a>
 <a class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all" href="mailto:eskim@dkbio-ai.com">
