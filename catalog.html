@@ -1,1 +1,1844 @@
-TO BE UPDATED
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DK BIO — Ingredient Portfolio 2026</title>
+
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F8F5F0;
+    --white: #FDFCFA;
+    --ink: #1C1917;
+    --ink-50: rgba(28,25,23,0.5);
+    --ink-20: rgba(28,25,23,0.12);
+    --ink-08: rgba(28,25,23,0.06);
+    --gold: #B08D57;
+    --gold-pale: #EDE3D4;
+    --navy: #0F2137;
+    --navy-80: rgba(15,33,55,0.8);
+    --red: #C0392B;
+    --sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    --serif: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    font-weight: 400;
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title { font-weight: 600; }
+  .sec-title { font-weight: 600; }
+  .td-product { font-weight: 600; }
+
+  .hero-body,
+  .sec-desc,
+  .td-func,
+  .cta-body,
+  .spotlight-body {
+    font-weight: 400;
+  }
+
+  .td-supplier, .td-inci { font-weight: 500; }
+
+  /* ── WRAPPER ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 0 80px rgba(0,0,0,0.08);
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 3px double var(--ink-20);
+    padding: 2.5rem 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  .masthead-meta {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  .masthead-issue {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: right;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  .masthead-title {
+    text-align: center;
+    border-top: 1px solid var(--ink-20);
+    border-bottom: 1px solid var(--ink-20);
+    padding: 1.2rem 0;
+    margin-bottom: 1.2rem;
+  }
+  .masthead-brand {
+    font-family: var(--serif);
+    font-size: 3.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--navy);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .masthead-brand span {
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .masthead-tagline {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+  .masthead-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .masthead-headline {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink-50);
+  }
+  .masthead-divider {
+    height: 1px;
+    background: var(--ink-20);
+    flex: 1;
+    margin: 0 1.2rem;
+  }
+  .masthead-contact {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-50);
+    text-align: right;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  /* ── HERO STRIP ── */
+  .hero-strip {
+    background: var(--navy);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-strip::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(176,141,87,0.08);
+  }
+  .hero-strip::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40%;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(176,141,87,0.05);
+  }
+  .hero-kicker {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 500;
+  }
+  .hero-kicker::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    max-width: 520px;
+  }
+  .hero-title em { color: var(--gold); font-style: normal; }
+  .hero-body {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(253,252,250,0.7);
+    max-width: 540px;
+    margin-bottom: 2rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-stat-n {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+  }
+  .hero-stat-l {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(253,252,250,0.5);
+    margin-top: 0.25rem;
+    font-weight: 400;
+  }
+  .hero-stat-sep { width: 1px; background: rgba(255,255,255,0.1); }
+
+  /* ── CONTENT AREA ── */
+  .content { padding: 0 3rem; }
+
+  /* ── SECTION HEADER ── */
+  .sec-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 2rem 0 1.2rem;
+    border-bottom: 1px solid var(--ink-20);
+    margin-bottom: 1.5rem;
+  }
+  .sec-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ink-20);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .sec-info { flex: 1; }
+  .sec-label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+  }
+  .sec-title {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .sec-title em { font-style: normal; }
+  .sec-desc {
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--ink-50);
+    margin-left: auto;
+    max-width: 240px;
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  /* ── INGREDIENT TABLE ── */
+  .ing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+  }
+  .ing-table thead tr {
+    border-bottom: 2px solid var(--ink);
+  }
+  .ing-table thead th {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--ink);
+    padding: 0.5rem 0.75rem 0.6rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  .ing-table thead th:first-child { padding-left: 0; }
+  .ing-table tbody tr {
+    border-bottom: 1px solid var(--ink-08);
+    transition: background 0.15s;
+  }
+  .ing-table tbody tr:hover { background: var(--cream); }
+  .ing-table tbody td {
+    padding: 0.8rem 0.75rem;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .ing-table tbody td:first-child { padding-left: 0; }
+  .td-product {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: normal;
+    min-width: 160px;
+    max-width: 200px;
+    word-break: break-word;
+  }
+  .td-inci {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink);
+    font-weight: 600;
+    opacity: 0.55;
+  }
+  .td-func {
+    color: var(--ink);
+    font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .td-supplier {
+    font-size: 0.78rem;
+    color: var(--ink);
+    opacity: 0.55;
+    font-weight: 600;
+  }
+  .td-country {
+    text-align: center;
+  }
+  .flag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--ink-20);
+    color: var(--ink-50);
+    white-space: nowrap;
+  }
+  .flag.jp { border-color: #BC002D; color: #BC002D; }
+  .flag.cn { border-color: #DE2910; color: #DE2910; }
+  .flag.kr { border-color: #003478; color: #003478; }
+  .highlight-row td { background: var(--gold-pale) !important; }
+  .new-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.1rem 0.4rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .hot-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--red);
+    color: var(--white);
+    padding: 0.1rem 0.4rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  /* ── SPOTLIGHT CARD ── */
+  .spotlight {
+    border: 1px solid var(--ink-20);
+    padding: 1.8rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    background: var(--cream);
+  }
+  .spotlight::before {
+    content: 'SPOTLIGHT';
+    position: absolute;
+    top: -0.55rem; left: 1.5rem;
+    background: var(--white);
+    padding: 0 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+  }
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .spotlight-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+  .spotlight-sub {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .spotlight-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--ink-50);
+  }
+  .spotlight-specs { display: flex; flex-direction: column; gap: 0.6rem; }
+  .spec-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--ink-08);
+  }
+  .spec-key {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    min-width: 80px;
+    font-weight: 500;
+  }
+  .spec-val {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink-20);
+    margin: 0.5rem 0 0;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--gold-pale);
+  }
+  .pullquote p {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.65;
+  }
+
+  /* ── CTA FOOTER ── */
+  .cta-block {
+    background: var(--navy);
+    padding: 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .cta-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+  .cta-title em { font-style: normal; color: var(--gold); }
+  .cta-body {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: rgba(253,252,250,0.6);
+    line-height: 1.65;
+  }
+  .cta-btns { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-end; }
+  .cta-btn {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .cta-btn.primary { background: var(--gold); color: var(--ink); }
+  .cta-btn.secondary { border: 1px solid rgba(255,255,255,0.15); color: rgba(253,252,250,0.6); }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 1.5rem 3rem;
+    border-top: 1px solid var(--ink-08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+  }
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--navy);
+    text-transform: uppercase;
+  }
+  .footer-info {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-50);
+    text-align: right;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  /* ── CATEGORY BADGE ROW ── */
+  .cat-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 1.2rem 3rem;
+    border-bottom: 1px solid var(--ink-08);
+    background: var(--white);
+  }
+  .cat-badge {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--ink-20);
+    color: var(--ink-50);
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+  .cat-badge:hover, .cat-badge.active {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .masthead, .content, .cta-block, .footer, .cat-nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero-strip { padding: 2rem 1.5rem; }
+    .masthead-brand { font-size: 2.5rem; letter-spacing: 0.2em; }
+    .hero-title { font-size: 1.9rem; }
+    .spotlight-grid, .cta-block { grid-template-columns: 1fr; }
+    .cta-btns { align-items: flex-start; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .ing-table { font-size: 0.75rem; }
+    .masthead-top { flex-direction: column; gap: 0.5rem; }
+    .sec-header { flex-wrap: wrap; }
+    .sec-desc { max-width: 100%; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── MASTHEAD ── -->
+  <div class="masthead">
+    <div class="masthead-top">
+      <div class="masthead-meta">
+        발행: (주)디케이바이오<br>
+        서울 구로구 중앙로3길 12, 서봉빌딩 603호
+      </div>
+      <div class="masthead-issue">
+        Vol. 02 · 2026년 상반기<br>
+        Ingredient Portfolio Brief
+      </div>
+    </div>
+    <div class="masthead-title">
+      <div class="masthead-brand">DK <span>BIO</span></div>
+      <div class="masthead-tagline">Global Cosmetic Ingredient Distributor · Since 2024</div>
+    </div>
+    <div class="masthead-sub">
+      <div class="masthead-headline">글로벌 원료 포트폴리오 브리핑 — 2026 상반기</div>
+      <div class="masthead-divider"></div>
+      <div class="masthead-contact">
+        info@dkbio.co.kr<br>
+        +82 70 7576 0387
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CATEGORY NAV ── -->
+  <div class="cat-nav">
+    <span class="cat-badge active">All</span>
+    <span class="cat-badge">Anti-Aging</span>
+    <span class="cat-badge">Brightening</span>
+    <span class="cat-badge">Hydration</span>
+    <span class="cat-badge">Soothing</span>
+    <span class="cat-badge">Antioxidant</span>
+    <span class="cat-badge">Hair Care</span>
+    <span class="cat-badge">Fermentation</span>
+    <span class="cat-badge">Surfactants</span>
+    <span class="cat-badge">Polymers</span>
+    <span class="cat-badge">UV / Preservatives</span>
+    <span class="cat-badge">Specialty</span>
+  </div>
+
+  <!-- ── HERO STRIP ── -->
+  <div class="hero-strip">
+    <div class="hero-kicker">2026 상반기 포트폴리오 브리핑</div>
+    <h1 class="hero-title">검증된 글로벌 원료,<br><em>빠른 소싱 · 정확한 연결</em></h1>
+    <p class="hero-body">
+      다미화학과 라비오의 37년 인프라를 기반으로, 중국·일본·한국 파트너사의 기능성 원료를 국내 화장품 R&D팀에 직접 연결합니다. 본 브리핑은 2026년 상반기 공급 가능 원료 전 카테고리를 정리한 자료입니다.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-n">99</div>
+        <div class="hero-stat-l">공급 원료</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-n">11</div>
+        <div class="hero-stat-l">카테고리</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-n">JP · CN · KR</div>
+        <div class="hero-stat-l">소싱 국가</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-n">24h</div>
+        <div class="hero-stat-l">1차 대응</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <div class="content">
+
+    <!-- ════ 1A Anti-Aging ════ -->
+    <div class="sec-header" id="cat-1a">
+      <div class="sec-num">1A</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-A</div>
+        <div class="sec-title">Anti-Aging / <em>Regeneration</em></div>
+      </div>
+      <div class="sec-desc">세포 재생·항노화·콜라겐 합성 타겟 고기능성 원료</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">PDRN</div>
+          <div class="spotlight-sub">Noyain Biochemical · 중국</div>
+          <p class="spotlight-body">A2A 수용체 활성화를 통한 항염·재생 작용, Salvage pathway 기반 세포 재생, VEGF·콜라겐 합성 촉진. 28일 임상에서 수분 +45%, TEWL -21%, 탄력 +12% 검증.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Sodium DNA</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">세포 재생 / 항염 / 항노화</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">Caviar Extract</td>
+          <td class="td-inci">CAVIAR EXTRACT</td>
+          <td class="td-func">TGF-β 발현 촉진 → 콜라겐 I/III/VI 합성 유도</td>
+          <td class="td-supplier">Noyain Biochemical</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">PDRN</td>
+          <td class="td-inci">Sodium DNA</td>
+          <td class="td-func">A2A 수용체 활성화 → 항염, Salvage pathway → 세포 재생, VEGF·콜라겐 합성 촉진</td>
+          <td class="td-supplier">Noyain Biochemical</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">OsrFN (식물유래 재조합 인체 피브로넥틴)</td>
+          <td class="td-inci">FIBRONECTIN</td>
+          <td class="td-func">ECM 핵심 단백질, 세포 양방향 접착으로 손상 피부 신속 회복, 진피 지지구조 재건, 콜라겐 합성 촉진</td>
+          <td class="td-supplier">Wu Han Healthgen</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Hydroxypropyl<br>Tetrahydropyrantriol<br><small style="font-weight:400;opacity:.6">Pro-Xylane 계열</small></td>
+          <td class="td-inci">Hydroxypropyl Tetrahydropyrantriol</td>
+          <td class="td-func">GAGs(뮤코다당체) 합성 최대 +400%, Type I 콜라겐·엘라스틴 합성 촉진</td>
+          <td class="td-supplier">Sichuan Jisheng</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Acetyl Hexapeptide-8<br><small style="font-weight:400;opacity:.6">Argireline</small></td>
+          <td class="td-inci">Acetyl Hexapeptide-8</td>
+          <td class="td-func">SNARE 복합체 억제 → 표정근 수축 완화 (보톡스 유사 기전)</td>
+          <td class="td-supplier">Sichuan Jisheng / JY Med Peptide</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Copper Tripeptide-1 (GHK-Cu)</td>
+          <td class="td-inci">Copper Tripeptide-1</td>
+          <td class="td-func">콜라겐·GAGs 합성 촉진, MMP 조절, 항산화</td>
+          <td class="td-supplier">Sichuan Jisheng / JY Med Peptide</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Palmitoyl Pentapeptide-4<br><small style="font-weight:400;opacity:.6">Matrixyl 계열</small></td>
+          <td class="td-inci">Palmitoyl Pentapeptide-4</td>
+          <td class="td-func">콜라겐·엘라스틴·GAG 합성 촉진, 팔미틴산 접합으로 침투성 향상</td>
+          <td class="td-supplier">JY Med Peptide</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Nonapeptide-1</td>
+          <td class="td-inci">Nonapeptide-1</td>
+          <td class="td-func">D형 아미노산 포함으로 효소 분해 저항성 우수, MC1R 저해 → 멜라닌 억제</td>
+          <td class="td-supplier">JY Med Peptide</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">MiniReCol® III / IV / VII,<br>SRHC® XVII (재조합 콜라겐)</td>
+          <td class="td-inci">sh-Polypeptide-123 외 재조합 콜라겐 단백질</td>
+          <td class="td-func">타입별 차별 기능: III형(소분자 침투), IV형(기저막), VII형(진피-표피 접합), XVII형(모낭·피부 결합)</td>
+          <td class="td-supplier">Jiangsu Trautec</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Vegan PDRN-tFNA</td>
+          <td class="td-inci">Sodium DNA</td>
+          <td class="td-func">사면체 DNA 나노구조체 기반 베지 PDRN, 동물 유래 PDRN 대체</td>
+          <td class="td-supplier">Jiangsu Trautec</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Permea-Col III / III-S001<br><small style="font-weight:400;opacity:.6">透皙原™</small></td>
+          <td class="td-inci">Soluble Collagen</td>
+          <td class="td-func">AI 설계 III형 인간화 콜라겐, 진피층 직접 전달, 4抗(항산화·항당화·항염·항히알분해)/4修(장벽·손상·모낭·피지선 …</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">ECMhydro PGA/HA</td>
+          <td class="td-inci">Sodium Polyglutamate, Sodium Hyaluronate Crosslinked …</td>
+          <td class="td-func">3D 생체모방 ECM, 자체 무게 4000~5000배 보습, MMP-1 억제, UV 손상 회복</td>
+          <td class="td-supplier">BioACT</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BotaniCellar™ Edelweiss</td>
+          <td class="td-inci">Leontopodium Alpinum Callus Extract (30%)</td>
+          <td class="td-func">고산 에델바이스 캘러스 배양 추출물, 항산화·항노화·수분 복합</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Apple Stem Cell Extract Plus<br>/ ResverAQUA</td>
+          <td class="td-inci">Malus Domestica Fruit Cell Culture Extract / Vitis Co…</td>
+          <td class="td-func">사과·산포도 줄기세포 배양액, 시클로덱스트린 안정화로 활성 유지</td>
+          <td class="td-supplier">Hokkaido Mitsui Chemicals</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Bakuchiol Water</td>
+          <td class="td-inci">Water, Pentylene Glycol, Bakuchiol, Hydrogenated Leci…</td>
+          <td class="td-func">레티놀 대체 안티에이징 식물 성분, 자극 없는 주름 개선</td>
+          <td class="td-supplier">LBH Inc.</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CELLAMENT™ /<br>Secretome Extract® Nano</td>
+          <td class="td-inci">Chicken Egg Extraembryonic Membrane Cell CM / Human A…</td>
+          <td class="td-func">줄기세포 배양액(시크리톰), 성장인자·엑소좀 풍부, 세포 재생·항노화</td>
+          <td class="td-supplier">IntegriCulture / Tele-Bio</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Placental Protein<br>Type K2 / HK2 / Ferment</td>
+          <td class="td-inci">Placental Protein, Saccharomyces/Black Strap Powder/P…</td>
+          <td class="td-func">플라센타 단백질 86</td>
+          <td class="td-supplier">Hokkaido Science Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Tangola®<br>Cordyceps Sinensis Extract</td>
+          <td class="td-inci">Cordyceps Sinensis Mycelium Powder, Cordyceps Sinensi…</td>
+          <td class="td-func">동충하초 균사체+추출물 복합, 항노화·면역 활성 동양 한방 컨셉</td>
+          <td class="td-supplier">Zhong Ke Zhong Zhi</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">PDRN + Ergothioneine 복합 원료</td>
+          <td class="td-inci">PDRN, Ergothioneine</td>
+          <td class="td-func">PDRN 재생 + Ergothioneine 강력 항산화 시너지</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1B Brightening ════ -->
+    <div class="sec-header" id="cat-1b">
+      <div class="sec-num">1B</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-B</div>
+        <div class="sec-title">Brightening / <em>Whitening</em></div>
+      </div>
+      <div class="sec-desc">미백·브라이트닝·톤업 기능성 원료</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">GO-VC® (10W)</div>
+          <div class="spotlight-sub">ITO Co. · 일본</div>
+          <p class="spotlight-body">차세대 비타민C 유도체(Caprylyl 2-Glyceryl Ascorbate). 기존 비타민C 대비 안정성과 피부 침투율이 현저히 개선된 미백·항산화 복합 기능성 원료.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Caprylyl 2-Glyceryl Ascorbate</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">미백 / 항산화 / 안정성</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">JP</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">BotaniCellar™<br>Tianshan Snow Lotus (W)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Saussurea Involucrata Callus Extract (30%)</td>
+          <td class="td-func">천산설련 캘러스 배양추출물, 미백·항산화·항염 복합 기능</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Mini-ReCol® IV<span class="new-badge">NEW</span></td>
+          <td class="td-inci">재조합 IV형 콜라겐 펩타이드</td>
+          <td class="td-func">기저막(BM) 타겟, 소분자로 침투 강화, 미백·탄력 동시 케어</td>
+          <td class="td-supplier">Jiangsu Trautec</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Niacinamide (Bio-based)</td>
+          <td class="td-inci">Niacinamide</td>
+          <td class="td-func">티로시나제 억제·멜라닌 이동 차단, 장벽 강화, 항염, 피지 조절</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BEN-063S<br><small style="font-weight:400;opacity:.6">주박 추출물</small></td>
+          <td class="td-inci">Rice Ferment Filtrate (Sake) 95.4~98.4%</td>
+          <td class="td-func">18종 유리 아미노산 (일본 대비 10배), 항산화 31배, 미백 2배, GABA 풍부로 콜라겐 합성 촉진</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BEN-064S<br>Coix Brighten Filtrate</td>
+          <td class="td-inci">Saccharomyces/Coix Lacryma-Jobi Ma-Yuen Seed Ferment …</td>
+          <td class="td-func">항당화 특화, 5차원 멜라닌 억제, 7일 내 멜라닌 -55%, AGEs -77%</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">RICETECT®</td>
+          <td class="td-inci">Monascus/Rice Ferment (70%), Propanediol (30%)</td>
+          <td class="td-func">홍국균·쌌 발효 단일원료, 미백·항산화</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">ROSE CRYSTA®-CO</td>
+          <td class="td-inci">Rosa Centifolia Flower Extract 1.5%</td>
+          <td class="td-func">장미 꿃 추출, 항산화·미백·광채 복합</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">GO-VC® (10W)</td>
+          <td class="td-inci">Caprylyl 2-Glyceryl Ascorbate</td>
+          <td class="td-func">차세대 비타민 C 유도체, 항산화·미백·보습 복합, 안정성 개선</td>
+          <td class="td-supplier">ITO Co.</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1C Hydration ════ -->
+    <div class="sec-header" id="cat-1c">
+      <div class="sec-num">1C</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-C</div>
+        <div class="sec-title">Hydration / <em>Moisture</em></div>
+      </div>
+      <div class="sec-desc">보습·수분 유지·장벽 강화 원료</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">Sodium Hyaluronate</div>
+          <div class="spotlight-sub">Hong Da Group · 중국</div>
+          <p class="spotlight-body">고분자량 1200~1500 kDa 히알루론산. 0.5% 수용액 점도 971 mPa·s로 글로벌 최고 수준. 생산능력 1,000톤 규모의 TUV SUD 인증 공급사.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Sodium Hyaluronate</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">고보습 / 진정 / 장벽</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">GlycoButter (★수용성 시어버터 보습 복합체)</td>
+          <td class="td-inci">Glycerin, Water, Butylene Glycol, 1,2-Hexanediol, Lec…</td>
+          <td class="td-func">MEL 바이오 유화제 기반 시어버터 가용화, 고보습·장벽 강화</td>
+          <td class="td-supplier">LABIO</td>
+          <td class="td-country"><span class="flag kr">KR</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Love-in-a-Mist Polysaccharide<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Love-in-a-mist polysaccharides 0.5%</td>
+          <td class="td-func">니엔라 다당체, 고보습·피부 결 개선</td>
+          <td class="td-supplier">Hokkaido Mitsui Chemicals</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Sodium Chondroitin<br>Sulfate (LMW)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Sodium Chondroitin Sulfate</td>
+          <td class="td-func">저분자(1500Da) GAG, 침투율 2~4배, 각질층 수분 개선, 콜라겐 I/III/IV형 발현 증가</td>
+          <td class="td-supplier">Hong Kang</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Sodium Hyaluronate</td>
+          <td class="td-inci">Sodium Hyaluronate</td>
+          <td class="td-func">고분자량 1200~1500 kDa, 자체 수천배 수분 흡수, 경쟁사 대비 최고 점도(0</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">HA 800 / HA 2000 (저분자 HA)</td>
+          <td class="td-inci">Hydrolyzed Sodium Hyaluronate</td>
+          <td class="td-func">HA 800: 800Da 진피층 초침투, ROS 제거, 표피세포 증식 촉진 / HA 2000: 1~3kDa, 깊은 보습·장…</td>
+          <td class="td-supplier">Hong Kang</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Trepoly-01S<br>Tremella Polysaccharide</td>
+          <td class="td-inci">Tremella Fuciformis Polysaccharide</td>
+          <td class="td-func">트리플 헬릭스 구조, 우론산 +18</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">N-Fibroin / SP / NL</td>
+          <td class="td-inci">SILK (FIBROIN), WATER, PHENOXYETHANOL</td>
+          <td class="td-func">실크 피브로인 단백질, 막수형성·보습·피부장벽 강화</td>
+          <td class="td-supplier">Nagasuna Mayu</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Hydrolyzed Keratin</td>
+          <td class="td-inci">Hydrolyzed Keratin</td>
+          <td class="td-func">오리 깃털 유래, 단백질 90%+, 분자량 800~1000Da, 모발·피부 보습막 형성</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">S-100HA 환원성 하이니올 리퀸드</td>
+          <td class="td-inci">Water, Sodium Hyaluronate, Mineral Salts</td>
+          <td class="td-func">환원성 이온수 + 하이알 복합, 항산화 보습</td>
+          <td class="td-supplier">A.I. System Products</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Pentylene Glycol /<br>1,2-Hexanediol</td>
+          <td class="td-inci">Pentylene Glycol / 1,2-Hexanediol</td>
+          <td class="td-func">다기능성 보습 + 방부 부스터, 장벽 강화, TEWL 감소</td>
+          <td class="td-supplier">Aroma Holly / Sanyo Trading</td>
+          <td class="td-country"><span class="flag cn">CN</span> <span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Fibronectin<br>Freeze-dried Powder (FM149)</td>
+          <td class="td-inci">Mannitol, Mannan, Beta-Glucan, Fibronectin</td>
+          <td class="td-func">성장인자 유사 단백질, 장벽·상처치유·보습</td>
+          <td class="td-supplier">Shang Hai Zhi Na</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1D Soothing/Barrier ════ -->
+    <div class="sec-header" id="cat-1d">
+      <div class="sec-num">1D</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-D</div>
+        <div class="sec-title">Soothing / <em>Barrier</em></div>
+      </div>
+      <div class="sec-desc">진정·항염·피부장벽 강화 원료</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">BEN-091S</div>
+          <div class="spotlight-sub">Guangdong Bien · 중국</div>
+          <p class="spotlight-body">개똥쑥+비피다 발효 복합. 5분 내 항균율 99.9% 인증. 유분 조절·항여드름·장벽 복구를 동시에 커버하는 다기능 진정 원료.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Bifida Ferment Filtrate, Artemisia Annua Extract</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">항균 / 진정 / 항여드름</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">BotaniCellar™<br>Crithmum Maritimum<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Crithmum Maritimum Callus Culture Filtrate 30%</td>
+          <td class="td-func">해회향 캘러스 여과물, 민감성 진정·미백·수분 복합 (Filtrate 형태)</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Glyco-Veil (, 라멜라 장벽)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">2,3-Butanediol, Glycolipids</td>
+          <td class="td-func">MEL Glycolipid 기반 라멜라 구조 형성, 피부장벽 강화</td>
+          <td class="td-supplier">LABIO</td>
+          <td class="td-country"><span class="flag kr">KR</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BotaniCellar™<br>Eryngium Maritimum</td>
+          <td class="td-inci">Eryngium Maritimum Callus Culture Extract 30%</td>
+          <td class="td-func">피부장벽 강화·항염·수분 복합</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BEN-091S 개똥쑥 비피다 발효액</td>
+          <td class="td-inci">Bifida Ferment Filtrate 73.8~92.3%, Artemisia Annua E…</td>
+          <td class="td-func">개똥쑥+비피다 발효 복합, 5분 내 항균율 99</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">OsrhLYZ (재조합 인체 리소자임)</td>
+          <td class="td-inci">LYSOZYME</td>
+          <td class="td-func">천연 항균 효소, 세균 세포벽 분해, 여드름성 피부·진정, 동물알레르기원 無</td>
+          <td class="td-supplier">Wu Han Healthgen</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Tangola™<br>Gentiana Scabra</td>
+          <td class="td-inci">Gentiana Macrophylla Extract</td>
+          <td class="td-func">진교 추출, 항염·진정·항알레르기</td>
+          <td class="td-supplier">Zhong Ke Zhong Zhi</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">S-100 / VG-100</td>
+          <td class="td-inci">Water (S-100), Water+Cellulose Gum+Mineral Salts+Glyc…</td>
+          <td class="td-func">환원성 이온수 및 이온 젤, 항산화·진정</td>
+          <td class="td-supplier">A.I. System Products</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Marine Silt FP-S</td>
+          <td class="td-inci">Sea Silt</td>
+          <td class="td-func">해저 실트 광물, 세정 및 흡착 보조, 널리진정</td>
+          <td class="td-supplier">ENCORE ANN</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1E Antioxidant ════ -->
+    <div class="sec-header" id="cat-1e">
+      <div class="sec-num">1E</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-E</div>
+        <div class="sec-title">Antioxidant / <em>Botanical</em></div>
+      </div>
+      <div class="sec-desc">항산화·식물 유래 고기능 소재</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">BotaniCellar™ Snow Lotus C1</div>
+          <div class="spotlight-sub">Acelbio · 중국</div>
+          <p class="spotlight-body">해발 4,000m+ 천산설련(Saussurea Involucrata) 캘러스 배양 추출물 30% 고함량. 항산화·항염·ECM 보호 복합 기능. 고산 환경에서 자란 희귀 식물의 강력한 내구 기전을 피부에 적용.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Saussurea Involucrata Callus Extract 30%</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">항산화 / 항염 / ECM 보호</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">UNIFINE®-CO<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Aspergillus/Soybean Seed Extract Ferment Extract Filt…</td>
+          <td class="td-func">대두 발효 추출물, 항산화·피부 컨디셔닝</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">RICETECT®<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Monascus/Rice Ferment 70%</td>
+          <td class="td-func">홍국균·쌌 발효, 항산화·톤업</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">ROSE CRYSTA®-CO<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Rosa Centifolia Flower Extract 1.5%</td>
+          <td class="td-func">장미 추출 항산화, 표구 컨셉</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">SHIZUOKA AOMIKAN<br>Extract Powder<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Citrus Unshiu Fruit Extract, Maltodextrin</td>
+          <td class="td-func">시즈오카 청귀광 추출, 국낛·항산화·비타민</td>
+          <td class="td-supplier">Nikken Foods</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Green Rooibos<br>Extract Powder SH<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Aspalathus Linearis Extract</td>
+          <td class="td-func">그린 루이보스, 고항산화 폴리페놀</td>
+          <td class="td-supplier">Nikken Foods</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Green Tea Powder DG-SP100<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Camellia Sinensis Leaf Extract</td>
+          <td class="td-func">녹차 추출, 고순도 카테긴</td>
+          <td class="td-supplier">Nikken Foods</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Shiunko Red Oil (, 지치뿌리)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Caprylic/Capric Triglyceride, Lithospermum Erythrorhi…</td>
+          <td class="td-func">지치뿌리 추출, 항산화·항염 + 천연 봉은 색소 겸비</td>
+          <td class="td-supplier">LABIO</td>
+          <td class="td-country"><span class="flag kr">KR</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CELEENA-LS (대나무 리그노셀룰로오스)</td>
+          <td class="td-inci">Water, Cellulose, Arabinoxylan, Lignin</td>
+          <td class="td-func">리그닌 기반 천연 항산화 (DPPH 라디컬 소거) + UV 차단 보조</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Tangola™ OPC Seabuckthorn</td>
+          <td class="td-inci">Hippophae Rhamnoides Fruit Extract</td>
+          <td class="td-func">사극 OPC, 고항산화·브라이트닝</td>
+          <td class="td-supplier">Zhong Ke Zhong Zhi</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BotaniCellar™ Snow Lotus C1</td>
+          <td class="td-inci">Saussurea Involucrata Callus Extract 30%</td>
+          <td class="td-func">천산설련 캘러스 배양, 항산화·항염·ECM 보호</td>
+          <td class="td-supplier">Acelbio</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Biota Orientalis<br>Leaf Extract (측백엽)</td>
+          <td class="td-inci">Biota Orientalis Leaf Extract</td>
+          <td class="td-func">항염·항균·탈모방지·비듬제거·유분조절</td>
+          <td class="td-supplier">Shang Hai Zhi Na</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1F Hair & Scalp ════ -->
+    <div class="sec-header" id="cat-1f">
+      <div class="sec-num">1F</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-F</div>
+        <div class="sec-title">Hair &amp; Scalp / <em>Care</em></div>
+      </div>
+      <div class="sec-desc">탈모·모근·두피 케어 특화 원료</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">BWA-100</div>
+          <div class="spotlight-sub">Sanyo Trading · 일본</div>
+          <p class="spotlight-body">세계 최초 100% 천연 헤어 컨디셔닝 원료(Chitosan Beeswaxamide). 큐티클 복구와 마찰계수 감소 효과. 2023년 신규 INCI 인증 획득.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Chitosan Beeswaxamide</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">헤어 컨디셔닝 / 큐티클 복구</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">JP</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">BWA-100 (, 천연 헤어 컨디셔닝)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Chitosan Beeswaxamide</td>
+          <td class="td-func">세계 최초 100% 천연 헤어 컨디셔닝, 큐티클 복구, 마찰계수 감소</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">FMRE 뽕나무 뿌리 추출물<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Morus Alba Root Extract 1.10%, Alcohol, Water</td>
+          <td class="td-func">뽕나무 뿌리 추출, 모발 성장 활성</td>
+          <td class="td-supplier">Fuji Sangyo</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">FBLE 구아바 잎 추출물<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Psidium Guajava Leaf Extract 2.30%, Alcohol, Water</td>
+          <td class="td-func">구아바 잎 추출, 모발 성장·두피 강화</td>
+          <td class="td-supplier">Fuji Sangyo</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">EASTHEALTH X.O®</td>
+          <td class="td-inci">Decyloxazolidinone, Water</td>
+          <td class="td-func">5세대 옥사졸리디논 항균제, 내성 無, 보습 겸비</td>
+          <td class="td-supplier">High Limit</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">EASTHEALTH No.1 한방 추출물</td>
+          <td class="td-inci">Platycladus Orientalis, Rehmannia, Ligustrum, Glycyrr…</td>
+          <td class="td-func">5종 한약재 복합, 탈모방지·두피영양</td>
+          <td class="td-supplier">High Limit</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Biota Orientalis<br>Leaf Extract (측백엽)</td>
+          <td class="td-inci">Biota Orientalis Leaf Extract 100%</td>
+          <td class="td-func">항염·항균·탈모방지·비듬제거·유분조절</td>
+          <td class="td-supplier">Shang Hai Zhi Na</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Hydrolyzed Keratin</td>
+          <td class="td-inci">Hydrolyzed Keratin</td>
+          <td class="td-func">오리 깃털 유래 단백질 90%+, 모발 내부 충전·탄력 부여</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Eye-Patch / Face Mask Sheet</td>
+          <td class="td-inci">SILK (FIBROIN), GLYCERIN</td>
+          <td class="td-func">실크 피브로인 시트, 고보습·탄력</td>
+          <td class="td-supplier">Nagasuna Mayu</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 1G Fermentation ════ -->
+    <div class="sec-header" id="cat-1g">
+      <div class="sec-num">1G</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 1-G</div>
+        <div class="sec-title">Fermentation / <em>Bio-tech</em></div>
+      </div>
+      <div class="sec-desc">발효·바이오 컨버전스 소재</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">Rosa Aura FF</div>
+          <div class="spotlight-sub">HeFei Delicate · 중국</div>
+          <p class="spotlight-body">장미-박테리아 공생 발효 특허 원료. 알레르기 유발 성분(제라니올 등)을 발효 공정으로 제거한 안전한 장미 발효액. 항산화·광채·진정 복합 기능.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Bifida Ferment Lysate, Rose Fermentation Broth</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">항산화 / 광채 / 진정</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">Dendrobium officinale<br>발효액 (석곡)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Saccharomyces Ferment Filtrate Dendrobium Officinale …</td>
+          <td class="td-func">철피석곡 발효, 고보습·항노화</td>
+          <td class="td-supplier">Guang Zhou Cn-Ferment</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Cyclic Pseudostellaria<br>Ferment (태자삼)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Lactobacillus Ferment, Pseudostellaria Heterophylla R…</td>
+          <td class="td-func">태자삼 유산균 발효, 보습·자양 케어</td>
+          <td class="td-supplier">Guang Zhou Cn-Ferment</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Rare Ginseng Ferment (, 희귀인삼)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Lactobacillus Ferment, Panax Ginseng Root Extract</td>
+          <td class="td-func">희귀 인삼 발효, 사포닌 증가, 항노화·활력</td>
+          <td class="td-supplier">Guang Zhou Cn-Ferment</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Placenta Ferment<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Saccharomyces/Black Strap Powder/Placental Extract Fe…</td>
+          <td class="td-func">플라센타 + 흑설탕 발효, 고활성</td>
+          <td class="td-supplier">Hokkaido Science Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">BEN-091S / 063S / 064S 라인</td>
+          <td class="td-inci">Bifida/Rice/Coix Ferment Filtrate 계열</td>
+          <td class="td-func">발효 플랫폼로 진정·미백·항당화 보유</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Trepoly-01S<br>Tremella Polysaccharide</td>
+          <td class="td-inci">Tremella Fuciformis Polysaccharide</td>
+          <td class="td-func">트레멜라 균주 발효 다당체, HA 대체</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">UNIFINE-CO / RICETECT /<br>ROSE CRYSTA-CO 라인</td>
+          <td class="td-inci">Aspergillus/Soybean, Monascus/Rice, Rosa Centifolia F…</td>
+          <td class="td-func">대두·쌌·장미 발효 시리즈</td>
+          <td class="td-supplier">Toyo Hakko</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Rosa Aura FF / 장미 발효액</td>
+          <td class="td-inci">Bifida Ferment Lysate, Rose Fermentation Broth</td>
+          <td class="td-func">꿃-박테리아 공생 발효, 제라니올 등 알레르기 성분 제거</td>
+          <td class="td-supplier">HeFei Delicate</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 2 Surfactants ════ -->
+    <div class="sec-header" id="cat-02">
+      <div class="sec-num">02</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 2</div>
+        <div class="sec-title">Surfactants / <em>Emulsifiers</em></div>
+      </div>
+      <div class="sec-desc">아미노산계·실리콘계 계면활성·유화 원료</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">JMIX® WO-MOMO</div>
+          <div class="spotlight-sub">JC Dermatology Lab · 일본</div>
+          <p class="spotlight-body">안정적인 W/O 유화를 구현하는 프리믹스 유화 베이스. 선크림·메이크업·BB크림 제형에 최적. 일본 JC Dermatology Lab 프리미엄 라인.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">W/O 유화 / 제형 안정화</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">JP</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">JMIX® WO-MOMO<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Caprylic/Capric Glycol, Polyglyceryl-4 Diisostearate/…</td>
+          <td class="td-func">W/O 유화 베이스, 안정한 W/O 제형 구현</td>
+          <td class="td-supplier">JC Dermatology Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">JMIX® OW-LCB green<span class="new-badge">NEW</span></td>
+          <td class="td-inci">100% 식물 유래 성분 조합</td>
+          <td class="td-func">O/W 유화제, 그린 컨셉</td>
+          <td class="td-supplier">JC Dermatology Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CELEENA-J (, 대나무 CNF)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Water, Cellulose</td>
+          <td class="td-func">대나무 셀룰로오스 나노섬유, 화학 계면활성제 無 O/W 피커링 유화</td>
+          <td class="td-supplier">Sanyo Trading</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CSPUJI LL01-95</td>
+          <td class="td-inci">Lauroyl Lysine</td>
+          <td class="td-func">아미노산계 기능성 파우더, 소수성, 원터프루프·내한때, 천연지수 100</td>
+          <td class="td-supplier">Chang Sha PU JI</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CSPUJI YC03H-30 / 95</td>
+          <td class="td-inci">Potassium Cocoyl Glycinate</td>
+          <td class="td-func">아미노산계 음이온 계면활제, 중성 pH 우수 기포력, 설페이트 프리</td>
+          <td class="td-supplier">Chang Sha PU JI</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">CSPUJI DG02H-95</td>
+          <td class="td-inci">Sodium Stearoyl Glutamate</td>
+          <td class="td-func">O/W 유화제, 100% 천연·생분해성, 피부 pH 5~7</td>
+          <td class="td-supplier">Chang Sha PU JI</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">SQ-SE 1090 / SQ-SE 1200</td>
+          <td class="td-inci">Cetyl PEG/PPG-10/1 Dimethicone / Lauryl PEG/PPG-18/18…</td>
+          <td class="td-func">실리콘계 W/O·W/Si 유화제, HLB 4</td>
+          <td class="td-supplier">ShengQing Materials</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">SQ-EM 35N</td>
+          <td class="td-inci">Polyacrylamide, C13-14 Isoparaffin, Laureth-7</td>
+          <td class="td-func">역상 에멃젼 유화·점증제, Sepigel 305 대체 포지셔닝</td>
+          <td class="td-supplier">ShengQing Materials</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 3 Polymers ════ -->
+    <div class="sec-header" id="cat-03">
+      <div class="sec-num">03</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 3</div>
+        <div class="sec-title">Polymers / <em>Texture</em></div>
+      </div>
+      <div class="sec-desc">점증·제형 설계·감촉 개선 소재</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">Airlica® 실리카 에어로젤</div>
+          <div class="spotlight-sub">Tokuyama · 일본</div>
+          <p class="spotlight-body">에어로젤 구조의 초경량 실리카. 피지 흡착·소프트포커스·메이크업 지속력 향상. 도쿠야마 그룹의 차세대 분체 원료.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Silica</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">피지 조절 / 소프트포커스 / 메이크업 지속</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">JP</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">REOLOSI™ / REOLOSIL® 흄드 실리카<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Silica</td>
+          <td class="td-func">초도 50nm 난다공성 실리카, 점도·광채 조절, 자외선 차단·메이크업 지속력</td>
+          <td class="td-supplier">Tokuyama</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Airlica® 실리카 에어로젤</td>
+          <td class="td-inci">Silica</td>
+          <td class="td-func">에어로젤 제형용 실리카</td>
+          <td class="td-supplier">Tokuyama</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">EXCEBEADS 무다공성 실리카</td>
+          <td class="td-inci">Silica</td>
+          <td class="td-func">구형 무다공성 실리카, 매트한 감촉</td>
+          <td class="td-supplier">Tokuyama</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Godd Ball® 시리즈<br><small style="font-weight:400;opacity:.6">D-11C / E-16C / B-6C …</small></td>
+          <td class="td-inci">Polymethyl Methacrylate / Acrylates Copolymer / Silic…</td>
+          <td class="td-func">구형 멀티프조 입자, 소프트포커스·매트·광확산</td>
+          <td class="td-supplier">Suzhou Nanomicro</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">ECMhydro PGA/HA</td>
+          <td class="td-inci">Sodium Polyglutamate, Sodium Hyaluronate Crosslinked …</td>
+          <td class="td-func">PGA + HA 가교 네트워크, ECM형 수용성 고분자</td>
+          <td class="td-supplier">BioACT</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Trepoly-01S</td>
+          <td class="td-inci">Tremella Fuciformis Polysaccharide</td>
+          <td class="td-func">다당체 고분자, 천연 점증·보습</td>
+          <td class="td-supplier">Guangdong Bien</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">VG-100 환원성 이온 젤</td>
+          <td class="td-inci">Water, Cellulose Gum, Mineral Salts, Glycerin</td>
+          <td class="td-func">환원성 이온 젤, 항산화·보습</td>
+          <td class="td-supplier">A.I. System Products</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 4·5 UV/Preservatives ════ -->
+    <div class="sec-header" id="cat-04">
+      <div class="sec-num">04</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 4 · 5</div>
+        <div class="sec-title">UV Filters &amp; <em>Preservatives</em></div>
+      </div>
+      <div class="sec-desc">자외선 차단 · 방부 시스템 소재</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">DHHB</div>
+          <div class="spotlight-sub">Hong Da Group · 중국</div>
+          <p class="spotlight-body">DSM JV 합작 공급 UVA 차단제. 장파장 UVA 고효율 차단 + 광안정성 우수. 프리미엄 선케어 제형의 핵심 자외선 차단 원료.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Diethylamino Hydroxybenzoyl Hexyl Benzoate</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">UVA 차단 / 광안정성</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">Sorbic Acid (Bio-based)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Sorbic Acid</td>
+          <td class="td-func">바이오매스 유래 소르븍산, 천연유래 방부제</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Levulinic Acid (Natural)<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Levulinic Acid</td>
+          <td class="td-func">옥수수 발효 유래, 천연유래 종합 방부제</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Potassium Sorbate (Bio-based)</td>
+          <td class="td-inci">Potassium Sorbate</td>
+          <td class="td-func">소르븍산칼륨, 천연 유래</td>
+          <td class="td-supplier">Hong Da Group</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">DHHB / EHT (자외선 차단제)</td>
+          <td class="td-inci">Diethylamino Hydroxybenzoyl Hexyl Benzoate / Ethylhex…</td>
+          <td class="td-func">DHHB: UVA 장파장 장기 안정 / EHT: UVB 고흡수 유기 자외선차단제</td>
+          <td class="td-supplier">Hong Da Group / DSM-Firmenich (DSM JV)</td>
+          <td class="td-country"><span class="flag cn">CN</span> <span class="flag">CH</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">1,2-Hexanediol /<br>Pentylene Glycol</td>
+          <td class="td-inci">1,2-Hexanediol / Pentylene Glycol</td>
+          <td class="td-func">다기능 보습+방부 부스터, 파라벤 명칭대체</td>
+          <td class="td-supplier">Aroma Holly / Sanyo Trading</td>
+          <td class="td-country"><span class="flag cn">CN</span> <span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">SQ-SF102 소포제</td>
+          <td class="td-inci">Polysilicone-11</td>
+          <td class="td-func">실리콘계 소포제, 폼 제거</td>
+          <td class="td-supplier">ShengQing Materials</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+
+    <!-- ════ 6 Specialty ════ -->
+    <div class="sec-header" id="cat-06">
+      <div class="sec-num">06</div>
+      <div class="sec-info">
+        <div class="sec-label">Category 6</div>
+        <div class="sec-title">Specialty / <em>Delivery Systems</em></div>
+      </div>
+      <div class="sec-desc">경피 전달·특수 소재·완제 시트</div>
+    </div>
+
+    <div class="spotlight">
+      <div class="spotlight-grid">
+        <div>
+          <div class="spotlight-name">Soluble Microneedle Technology</div>
+          <div class="spotlight-sub">BioACT · 중국</div>
+          <p class="spotlight-body">HA + Tirzepatide 기반 용해성 마이크로니들. 경피 전달 효율을 극대화한 차세대 전달 시스템. 필러·주름·국소 활성 타겟 제형에 적용 가능.</p>
+        </div>
+        <div class="spotlight-specs">
+          <div class="spec-row"><span class="spec-key">INCI</span><span class="spec-val">Hyaluronic Acid + Active Ingredients</span></div>
+          <div class="spec-row"><span class="spec-key">기능</span><span class="spec-val">경피 전달 / 마이크로니들 / 표적 전달</span></div>
+          <div class="spec-row"><span class="spec-key">원산지</span><span class="spec-val">CN</span></div>
+          <div class="spec-row"><span class="spec-key">추천 제형</span><span class="spec-val">문의 요망</span></div>
+          <div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">문의 요망</span></div>
+        </div>
+      </div>
+    </div>
+    <table class="ing-table">
+      <thead>
+        <tr>
+          <th>원료명</th>
+          <th>INCI / 핵심 성분</th>
+          <th>주요 기능</th>
+          <th>공급사</th>
+          <th style="text-align:center;">국가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td class="td-product">JMIX® 3EG-500<span class="new-badge">NEW</span></td>
+          <td class="td-inci">Tri-Ethylhexylglycerin Complex</td>
+          <td class="td-func">3종 에틸헥실글리세린 복합체, 항균·장벽·쿨링</td>
+          <td class="td-supplier">JC Dermatology Lab</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Soluble Microneedle Technology</td>
+          <td class="td-inci">Hyaluronic Acid + Active Ingredients (Tirzepatide 등)</td>
+          <td class="td-func">용해성 마이크니들 기술, 필러·주름·표적고축 타겟</td>
+          <td class="td-supplier">BioACT</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Nanosphere EXO</td>
+          <td class="td-inci">Exosome Encapsulation</td>
+          <td class="td-func">나노재료 안정화 엑소좀, 프리미엄 안티에이징</td>
+          <td class="td-supplier">BioACT</td>
+          <td class="td-country"><span class="flag cn">CN</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">DK-DES (독자 제형)</td>
+          <td class="td-inci">Proprietary blend</td>
+          <td class="td-func">DK-BIO 독자 개발 특수 제형</td>
+          <td class="td-supplier">DK-BIO</td>
+          <td class="td-country"><span class="flag kr">KR</span></td>
+        </tr>
+        <tr>
+          <td class="td-product">Secretome Extract® Nano<br><small style="font-weight:400;opacity:.6">리포좀 제형</small></td>
+          <td class="td-inci">Human Adipose Stromal Cell Conditioned Media Extract</td>
+          <td class="td-func">세포 배양액 나노리포좀화, 피부 침투 향상</td>
+          <td class="td-supplier">Tele-Bio</td>
+          <td class="td-country"><span class="flag jp">JP</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="section-divider"/>
+  </div><!-- /content -->
+
+  <!-- ── CTA BLOCK ── -->
+  <div class="cta-block">
+    <div>
+      <div class="cta-title">원하시는 원료가 있으신가요?<br><em>24시간 내 소싱 가능 여부를 확인해 드립니다.</em></div>
+      <p class="cta-body">
+        견적 문의, 샘플 요청, 규격서(TDS/SDS) 요청 모두 아래 연락처로 주시면 됩니다.<br>
+        리스트에 없는 원료도 글로벌 네트워크를 통해 소싱 가능합니다.
+      </p>
+    </div>
+    <div class="cta-btns">
+      <a href="mailto:info@dkbio.co.kr" class="cta-btn primary">이메일 문의</a>
+      <a href="tel:+827075760387" class="cta-btn secondary">+82 70 7576 0387</a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">
+    <div class="footer-brand">DK Bio</div>
+    <div class="footer-info">
+      (주)디케이바이오 · 서울 구로구 중앙로3길 12, 서봉빌딩 603호<br>
+      info@dkbio.co.kr · +82 70 7576 0387 · www.dkbio.co.kr
+    </div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
